@@ -10,7 +10,7 @@ const Navbar = () => {
   const [toggle, SetToggle] = useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex justify-between items-center fixed top-0 left-0 z-50 bg-primary`}
+      className={`${styles.paddingX} w-full flex justify-between items-center fixed top-4  left-0 z-50`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -22,14 +22,14 @@ const Navbar = () => {
           }
           }
         >
-          <img src={logo} alt="logo" className="w-100 h-10 object-contain" />
+          <img src={logo} alt="logo" className="w-100 h-9 object-contain" />
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${active === link.title ? "text-white" : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                } hover:text-white text-[18px] font-medium hover:cursor-pointer hover:border-orange-500 hover:border-b-2`}
               onClick={() => SetActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
