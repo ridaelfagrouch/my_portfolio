@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
-import { logo, menu, close } from '../assets'
+import { menu, close } from '../assets'
+import { Button } from 'antd'
 
 const Navbar = () => {
   const [active, SetActive] = useState("");
@@ -13,22 +14,11 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex justify-between items-center fixed top-4  left-0 z-50`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className='flex items-center gap-2'
-          onClick={() => {
-            SetActive("")
-            window.scrollTo(0, 0)
-          }
-          }
-        >
-          <img src={logo} alt="logo" className="w-100 h-9 object-contain" />
-        </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"
+              className={`${active === link.title ? "text-white border-b-2 border-orange-500" : "text-secondary"
                 } hover:text-white text-[18px] font-medium hover:cursor-pointer hover:border-orange-500 hover:border-b-2`}
               onClick={() => SetActive(link.title)}
             >
@@ -36,6 +26,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <Button type='primary' className= 'hidden sm:block text-white font-medium bg-orange-500' >
+          Contact Me
+        </Button>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -53,7 +46,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
+                  className={`${active === link.title ? "text-white border-b-2 border-orange-500" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
                   onClick={() => {
                     SetToggle(!toggle);
                     SetActive(link.title);
@@ -62,6 +55,9 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+              <Button type='primary' className= ' text-white font-medium bg-orange-500' >
+                Contact Me
+              </Button>
             </ul>
           </div>
           {/* ---------------------------------------------------------------------------- */}
