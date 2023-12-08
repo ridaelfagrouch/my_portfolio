@@ -8,7 +8,9 @@ function App() {
     <BrowserRouter>
       <ConfigProvider>
         <div className="w-screen h-screen bg-primary z-0 relative">
-          <SocialMedia />
+          <div className="fixed h-full flex items-center ml-[10%] z-50">
+            <SocialMedia />
+          </div>
           <div className="w-full h-full flex flex-col justify-center items-center">
             <Navbar />
             <Hero />
