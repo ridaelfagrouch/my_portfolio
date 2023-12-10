@@ -74,12 +74,12 @@ const Hero = () => {
           </div>
         </a>
       </div>
-      <motion.div className="absolute bottom-[-150px] text-[50vh] whitespace-nowrap max-w-screen text-secondary opacity-5 w-[50%] font-bold" 
+      <motion.div className="absolute bottom-[-150px] text-[50vh] whitespace-nowrap max-w-screen text-secondary opacity-5 w-[100%] font-bold" 
         variants={sliderVariants}
         initial="initial"
         animate="animate"
       >
-        Js Developer
+        Web & Mobile Developer
       </motion.div>
       <Modal  open={isModalOpen}  onCancel={handleCancel} footer={null} width={1000} centered >
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
