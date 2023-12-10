@@ -14,7 +14,11 @@ import {
   
   export const navLinks = [
     {
-      id: "about",
+      id: "Home",
+      title: "Home",
+    },
+    {
+      id: "About",
       title: "About",
     },
     {
@@ -22,13 +26,17 @@ import {
       title: "Education",
     },
     {
-      id: "work",
+      id: "Works",
       title: "Work",
     },
     {
       id:"Experience",
       title:"Experience"
     },
+    {
+      id:"Contact",
+      title:"Contact"
+    }
   ];
   
   const technologies = [

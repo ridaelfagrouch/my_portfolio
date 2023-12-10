@@ -2,7 +2,9 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <div>Experience</div>
+    <section id='Experience' className='w-full max-w-7xl'>
+        Experience
+    </section>
   )
 }
 

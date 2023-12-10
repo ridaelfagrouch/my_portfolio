@@ -1,8 +1,6 @@
 import React from "react";
 import { Button } from "antd";
 import {
-  FacebookOutlined,
-  InstagramOutlined,
   TwitterOutlined,
   LinkedinOutlined,
   GithubOutlined,
@@ -12,30 +10,12 @@ import { motion } from "framer-motion";
 const socialMediaData = [
   {
     icon: (
-      <FacebookOutlined
-        style={{ color: "#3b5999", fontSize: "2.5rem" }}
-        rev={undefined}
-      />
-    ),
-    href: "#",
-  },
-  {
-    icon: (
-      <InstagramOutlined
-        style={{ color: "#e4405f", fontSize: "2.5rem" }}
-        rev={undefined}
-      />
-    ),
-    href: "#",
-  },
-  {
-    icon: (
       <TwitterOutlined
         style={{ color: "#55acee", fontSize: "2.5rem" }}
         rev={undefined}
       />
     ),
-    href: "#",
+    href: "https://twitter.com/Rida34089360",
   },
   {
     icon: (
@@ -44,7 +24,7 @@ const socialMediaData = [
         rev={undefined}
       />
     ),
-    href: "#",
+    href: "https://www.linkedin.com/in/rida-el-fagrouch-13b566142/",
   },
   {
     icon: (
@@ -53,7 +33,7 @@ const socialMediaData = [
         rev={undefined}
       />
     ),
-    href: "#",
+    href: "https://github.com/ridaelfagrouch",
   },
 ];
 
@@ -62,7 +42,7 @@ const SocialMedia = () => {
       <div className="fixed flex flex-col justify-center z-50 ">
         {socialMediaData.map((item, index) => (
           <div key={index}>
-            <Button type="link" href={item.href} icon={item.icon} />
+            <Button type="link" href={item.href} icon={item.icon} target="_blank" rel="noopener noreferrer"/>
           </div>
         ))}
       </div>

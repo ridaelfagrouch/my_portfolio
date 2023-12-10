@@ -2,7 +2,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <section id='Contact' className='w-full max-w-7xl'>
+      Contact
+    </section>
   )
 }
 
