@@ -40,7 +40,7 @@ const SocialMedia = () => {
   return (
       <div className="fixed flex flex-col justify-center z-50 ">
         {socialMediaData.map((item, index) => (
-          <div key={index}>
+          <div key={index} >
             <Button type="link" href={item.href} icon={item.icon} target="_blank" rel="noopener noreferrer"/>
           </div>
         ))}
