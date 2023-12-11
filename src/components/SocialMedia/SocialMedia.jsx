@@ -5,7 +5,6 @@ import {
   LinkedinOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
-import { motion } from "framer-motion";
 
 const socialMediaData = [
   {

@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <ConfigProvider>
         <div className="w-full bg-primary z-0 relative ">
-          <div className="fixed h-full flex items-center ml-[10%] z-50">
+          <div className="fixed h-full flex items-center ml-[10%] z-50 max-xl:items-end max-xl:ml-[5%] max-xl:bottom-20 max-lg:bottom-5">
             <SocialMedia />
           </div>
           <Navbar />
