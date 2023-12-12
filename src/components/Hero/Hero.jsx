@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Button, Modal } from "antd";
 import { ExportOutlined } from "@ant-design/icons";
@@ -15,13 +15,50 @@ import { themePlugin } from "@react-pdf-viewer/theme";
 import Lottie from "lottie-react";
 import animation from "../../assets/lottie_file/Animation_2.json";
 
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      repeat: Infinity,
+      repeatType: "mirror",
+      duration: 10,
+    },
+  },
+};
+
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
+
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const fullScreenPluginInstance = fullScreenPlugin();
   const newPlugin = defaultLayoutPlugin();
   const printPluginInstance = printPlugin();
   const themePluginInstance = themePlugin();
-
+  
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -30,41 +67,54 @@ const Hero = () => {
     setIsModalOpen(false);
   };
 
-  const sliderVariants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: "-220%",
-      transition: {
-        repeat: Infinity,
-        repeatType: "mirror",
-        duration: 10,
-      },
-    },
-  };
+  
 
   return (
     <section id="Home" className={`relative w-full  overflow-hidden`}>
       <div className="max-w-7xl h-full mx-auto flex flex-row justify-between items-center space-x-2 py-5 max-2xl:relative ">
-        <div className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:w-full max-sm:gap-3">
-          <h1 className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl">Hello, I'm</h1>
-          <h1 className="text-4xl font-bold text-orange-600 max-md:text-3xl max-sm:text-xl">
-            Rida El Fagrouch
-          </h1>
-          <h1 className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl">Full Stack Js Developer</h1>
-          <Button
-            type="primary"
-            className="w-[200px] h-[50px] text-white text-xl font-bold bg-orange-600 z-10 max-sm:text-lg max-sm:w-[150px] max-sm:h-[40px]"
-            icon={<ExportOutlined />}
-            onClick={showModal}
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={textVariants}
+          className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:w-full max-sm:gap-3"
+        >
+          <motion.h1
+            variants={textVariants}
+            className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
           >
-            Resume
-          </Button>
-        </div>
-        <div className="w-[50%] max-2xl:absolute max-2xl:w-full max-2xl:z-[-1] max-2xl:opacity-20">
-          <Lottie animationData={animation} className="w-[100%]" />
-        </div>
+            Hello, I'm
+          </motion.h1>
+          <motion.h1
+            variants={textVariants}
+            className="text-4xl font-bold text-orange-600 max-md:text-3xl max-sm:text-xl"
+          >
+            Rida El Fagrouch
+          </motion.h1>
+          <motion.h1
+            variants={textVariants}
+            className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
+          >
+            Full Stack Js Developer
+          </motion.h1>
+          <motion.div variants={textVariants}>
+            <Button
+              type="primary"
+              className="w-[200px] h-[50px] text-white text-xl font-bold bg-orange-600 z-10 max-sm:text-lg max-sm:w-[150px] max-sm:h-[40px]"
+              icon={<ExportOutlined />}
+              onClick={showModal}
+            >
+              Resume
+            </Button>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={textVariants}
+          className="w-[50%] max-2xl:absolute max-2xl:w-full "
+        >
+          <Lottie animationData={animation} className="w-[100%] max-2xl:z-[-1] max-2xl:opacity-20" />
+        </motion.div>
       </div>
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
@@ -84,7 +134,7 @@ const Hero = () => {
         </a>
       </div>
       <motion.div
-        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-30"
+        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-5"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
