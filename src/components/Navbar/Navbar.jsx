@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const handleNavLinkClick = (title) => {
     setToggle(false);
-    setActive(title);
   };
 
   useEffect(() => {
@@ -52,7 +51,7 @@ const Navbar = () => {
                 active === link.title
                   ? "text-primary border-b-2 border-orange-500"
                   : "text-primary"
-              } hover:text-primary  text-[18px] font-bold hover:cursor-pointer hover:border-orange-500 hover:border-b-2`}
+              } hover:opacity-80  text-[18px] font-bold hover:cursor-pointer`}
               onClick={() => handleNavLinkClick(link.title)}
             >
               {link.title != "Contact" && (

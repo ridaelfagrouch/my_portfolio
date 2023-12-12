@@ -13,6 +13,12 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
+import c from "./tech/c.png";
+import cplusplus from "./tech/cplusplus.png";
+import expressjs from "./tech/expressjs.png";
+import nestjs from "./tech/nestjs.png";
+import nextjs from "./tech/nextjs.png";
+import sass from "./tech/sass.png"
 
 
 export {
@@ -30,4 +36,10 @@ export {
   redux,
   tailwind,
   typescript,
+  c,
+  cplusplus,
+  expressjs,
+  nestjs,
+  nextjs,
+  sass,
 };

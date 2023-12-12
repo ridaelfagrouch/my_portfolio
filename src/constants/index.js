@@ -10,6 +10,12 @@ import {
     git,
     figma,
     docker,
+    c,
+    cplusplus,
+    expressjs,
+    nestjs,
+    nextjs,
+    sass,
   } from "../assets";
   
   export const navLinks = [
@@ -73,6 +79,10 @@ import {
       icon: nodejs,
     },
     {
+      name: "expressjs",
+      icon: expressjs,
+    },
+    {
       name: "git",
       icon: git,
     },
@@ -84,8 +94,27 @@ import {
       name: "docker",
       icon: docker,
     },
+    {
+      name: "c",
+      icon: c,
+    },
+    {
+      name: " cplusplus",
+      icon:  cplusplus,
+    },
+    {
+      name : "nextjs",
+      icon: nextjs,
+    },
+    {
+      name: "nestjs",
+      icon: nestjs,
+    },
+    {
+      name: "sass",
+      icon: sass ,
+    }
   ];
-  
   
   // const projects = [
   //   {

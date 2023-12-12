@@ -45,9 +45,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="Home" className={`relative w-full overflow-hidden`}>
-      <div className="max-w-7xl h-full mx-auto flex flex-row justify-between space-x-2 py-5 max-2xl:relative">
-        <div className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:mb-96 max-2xl:w-full max-sm:gap-3">
+    <section id="Home" className={`relative w-full  overflow-hidden`}>
+      <div className="max-w-7xl h-full mx-auto flex flex-row justify-between items-center space-x-2 py-5 max-2xl:relative ">
+        <div className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:w-full max-sm:gap-3">
           <h1 className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl">Hello, I'm</h1>
           <h1 className="text-4xl font-bold text-orange-600 max-md:text-3xl max-sm:text-xl">
             Rida El Fagrouch
@@ -62,7 +62,7 @@ const Hero = () => {
             Resume
           </Button>
         </div>
-        <div className="w-[50%] max-2xl:absolute max-2xl:w-full max-2xl:h-full max-2xl:z-[-1] max-2xl:opacity-20">
+        <div className="w-[50%] max-2xl:absolute max-2xl:w-full max-2xl:z-[-1] max-2xl:opacity-20">
           <Lottie animationData={animation} className="w-[100%]" />
         </div>
       </div>
@@ -84,7 +84,7 @@ const Hero = () => {
         </a>
       </div>
       <motion.div
-        className="absolute bottom-[-140px] text-[40vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[100%] font-bold"
+        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-30"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
