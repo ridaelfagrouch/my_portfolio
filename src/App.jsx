@@ -7,7 +7,6 @@ import {
   Hero,
   Navbar,
   Works,
-  Education,
   SocialMedia
 } from "./components";
 
@@ -25,9 +24,8 @@ function App() {
           >
             <Hero />
             <About />
-            <Education />
-            <Works />
             <Experience />
+            <Works />
             <Contact />
           </div>
         </div>

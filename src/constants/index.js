@@ -28,16 +28,12 @@ import {
       title: "About",
     },
     {
-      id: "Education",
-      title: "Education",
+      id:"Experience",
+      title:"Experience"
     },
     {
       id: "Works",
       title: "Work",
-    },
-    {
-      id:"Experience",
-      title:"Experience"
     },
     {
       id:"Contact",

@@ -45,9 +45,9 @@ const About = () => {
       initial="hidden"
       variants={variants}
     >
-      <div className="absolute w-full h-full flex justify-center items-center  opacity-5">
+      {/* <div className="absolute w-full h-full flex justify-center items-center  opacity-5">
         <Lottie animationData={animation} className="w-[100%]" />
-      </div>
+      </div> */}
       <motion.div variants={variants} className="flex w-full  space-x-5 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:space-x-0 max-xl:space-y-2 ">
         <motion.div variants={variants} className="w-1/4 max-xl:w-[90%]  max-xl:h-[150px] bg-primary h-full rounded-lg flex flex-col justify-center items-center p-[2%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]">
           <Image src={myPhoto} className=" max-xl:hidden" style={{ height: '250px', objectFit: 'contain' }}/>

@@ -23,7 +23,6 @@ section {
 .container {
   max-width: 800px;
   margin: auto;
-  padding: 16px;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -81,21 +80,21 @@ section {
 
 
 .container2 {
-	width: 70%;
-	height: auto;
-	margin: auto 0;
+	width: 90%;
+	/* margin: auto 0; */
+	margin-top: 80px;
 	position: relative;
 }
 
-.container2 ul {
+/* .container2 ul {
 	list-style: none;
-}
+} */
 
-.container2 ul::after {
+.container2  ul::after {
 	content: " ";
 	position: absolute;
 	width: 2px;
-	height: 100%;
+	height: 80%;
 	left: 50%;
 	top: 0;
 	transform: translateX(-50%);
@@ -104,14 +103,14 @@ section {
 
 .container2 ul li {
 	width: 50%;
-	height: auto;
+	/* height: auto; */
 	padding: 15px 20px;
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
 	position: relative;
 	margin-bottom: 30px;
-	z-index: 99;
+	z-index: 10;
 }
 
 .container2 ul li:nth-child(4) {
@@ -174,13 +173,12 @@ section {
 	clear: left;
 	transform: translateX(30px);
 }
-.container2 ul li .heading {
+/* .container2 ul li .heading {
 	font-size: 17px;
 	color: #000;
-}
+} */
 
 .container2 ul li p {
-	font-size: 13px;
 	color: #666;
 	line-height: 18px;
 	margin: 6px 0 4px 0;
@@ -203,9 +201,10 @@ section {
 	.container2{
 		width: 70%;
 		transform: translateX(20px);
+		margin-bottom: -50px;
 	}
 	.container2 ul::after{
-		left: -40px;
+		left: -30px;
 	}
 	.container2 ul li {
 		width: 100%;
@@ -214,11 +213,14 @@ section {
 		margin-bottom: 80px;
 	}
 	.container2 ul li .circle{
-		left: -40px;
+		left: -50px;
 		transform: translate(-50%, -50%);
 	}
 	.container2 ul li .date{
 		left: 20px;
+		width: 100px;
+		height: 25px;
+		font-size: 10px;
 	}
 	.container2 ul li:nth-child(odd) {
 		transform: translateX(0px);
@@ -234,9 +236,15 @@ section {
 		width: 80%;
 	}
 	.container2 ul::after{
-		left: -20px;
+		left: -30px;
 	}
 	.container2 ul li .circle{
-		left: -20px;
+		left: -50px;
 	}
+}
+
+.ant-divider-horizontal.ant-divider-with-text-center::before,
+.ant-divider-horizontal.ant-divider-with-text-center::after
+{
+   border-top: 1px solid white;
 }
