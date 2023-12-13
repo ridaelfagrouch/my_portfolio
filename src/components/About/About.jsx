@@ -39,7 +39,7 @@ const About = () => {
   return (
     <motion.section
       id="About"
-      className="relative w-full h-screen max-w-7xl flex flex-col justify-center items-center space-y-5 text-White max-xl:space-y-0 p-4 "
+      className="relative w-full h-screen max-w-7xl flex flex-col justify-center items-center space-y-5 text-White max-xl:space-y-0 py-4 "
       ref={ref}
       animate={controls}
       initial="hidden"
@@ -88,7 +88,7 @@ const About = () => {
         </motion.div>
         <motion.div variants={variants} className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]">
           <h1 className="text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">3+</h1>
-          <h1 className="text-center">Experience Years</h1>
+          <h1 className="text-center">Years</h1>
         </motion.div>
         <motion.div variants={variants} className="xl:hidden flex flex-row justify-between w-2/3 max-xl:w-[90%] space-x-3">
           <motion.div variants={variants} className="w-1/2  bg-primary h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]">
@@ -97,7 +97,7 @@ const About = () => {
           </motion.div>
           <motion.div variants={variants} className="w-1/2   bg-primary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]">
             <h1 className="text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">3+</h1>
-            <h1 className="text-center max-md:text-[10px]">Experience Years</h1>
+            <h1 className="text-center max-md:text-[10px]">Years</h1>
           </motion.div>
         </motion.div>
         <motion.div variants={variants} className="w-3/5 max-xl:w-[90%] bg-primary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]">

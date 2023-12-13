@@ -19,6 +19,7 @@ import expressjs from "./tech/expressjs.png";
 import nestjs from "./tech/nestjs.png";
 import nextjs from "./tech/nextjs.png";
 import sass from "./tech/sass.png"
+import Atikia from "./Atikia.svg"
 
 
 export {
@@ -42,4 +43,5 @@ export {
   nestjs,
   nextjs,
   sass,
+  Atikia
 };

@@ -4,6 +4,7 @@ import {
   TwitterOutlined,
   LinkedinOutlined,
   GithubOutlined,
+  GoogleOutlined,
 } from "@ant-design/icons";
 
 const socialMediaData = [
@@ -28,20 +29,29 @@ const socialMediaData = [
   {
     icon: (
       <GithubOutlined
-        style={{ color: "#333", fontSize: "2.5rem" }}
+        style={{ color: "#fff", fontSize: "2.5rem" }}
         rev={undefined}
       />
     ),
     href: "https://github.com/ridaelfagrouch",
   },
+  {
+    icon : (
+      <GoogleOutlined 
+        style={{ color: "#fff", fontSize: "2.5rem" }}
+        rev={undefined}
+      />
+    ),
+    href: "#",
+  }
 ];
 
 const SocialMedia = () => {
   return (
-      <div className="fixed flex flex-col justify-center z-50 ">
+      <div className="fixed flex flex-col max-2xl:flex-row max-2xl:space-x-4 justify-center z-50 ">
         {socialMediaData.map((item, index) => (
           <div key={index} >
-            <Button type="link" href={item.href} icon={item.icon} target="_blank" rel="noopener noreferrer"/>
+            <Button type="link" href={item.href} icon={item.icon} target="_blank" rel="noopener noreferrer" className="hover:scale-75"/>
           </div>
         ))}
       </div>

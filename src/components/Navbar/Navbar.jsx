@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex justify-between items-center fixed top-0 left-0 z-50 bg-white py-5 bg-shadow-xl`}
+      className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50 bg-primary bg-shadow-xl `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ul className="list-none hidden md:flex flex-row gap-10">
@@ -49,8 +49,8 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title
-                  ? "text-primary border-b-2 border-orange-500"
-                  : "text-primary"
+                  ? "text-white border-b-2 border-orange-500"
+                  : "text-white"
               } hover:opacity-80  text-[18px] font-bold hover:cursor-pointer`}
               onClick={() => handleNavLinkClick(link.title)}
             >
@@ -64,7 +64,7 @@ const Navbar = () => {
         <Button
           type="primary"
           className={` text-white font-bold bg-orange-600 ${
-            active === "Contact" ? "text-primary" : ""
+            active === "Contact" ? "border-2 border-white" : ""
           }`}
           href="#Contact"
           onClick={() => handleNavLinkClick("Contact")}
@@ -76,7 +76,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer "
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
 
