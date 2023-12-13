@@ -56,7 +56,7 @@ const Navbar = () => {
                 {active === link.title ? (
                   <motion.span
                     layoutId="underline"
-                    className="absolute bottom-0 left-0 w-full h-1 bg-white rounded-full top-6"
+                    className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full top-6"
                   />
                 ) : null}
                 {link.title}

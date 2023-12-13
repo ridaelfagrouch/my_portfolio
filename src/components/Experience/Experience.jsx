@@ -10,7 +10,7 @@ const Experience = () => {
       id="Experience"
       className="relative w-full h-screen max-w-7xl flex flex-col justify-center items-center space-y-5  text-White"
     >
-      <div className="flex flex-col space-y-10 justify-center items-center w-full max-w-7xl">
+      <div className="flex flex-col space-y-12 justify-center items-center w-full max-w-7xl">
         <div className="w-full px-[5%]">
           <Divider style={{ color: "white", fontWeight: "bold" }}>
             Experience
@@ -42,7 +42,7 @@ const Experience = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center  space-y-10 w-full max-w-7xl">
+      <div className="flex flex-col justify-center items-center  space-y-12 w-full max-w-7xl">
         <div className="w-full px-[5%]">
           <Divider style={{ color: "white", fontWeight: "bold" }}>
             Education
