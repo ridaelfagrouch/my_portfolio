@@ -3,6 +3,7 @@ import { styles } from "../../styles";
 import { navLinks } from "../../constants";
 import { menu, close } from "../../assets";
 import { Button } from "antd";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -38,32 +39,35 @@ const Navbar = () => {
     };
   }, []);
 
+  
+
   return (
     <nav
-      className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50 bg-primary bg-shadow-xl `}
+      className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50  bg-shadow-xl backdrop-blur-sm `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ul className="list-none hidden md:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title
-                  ? "text-white border-b-2 border-orange-500"
-                  : "text-white"
-              } hover:opacity-80  text-[18px] font-bold hover:cursor-pointer`}
-              onClick={() => handleNavLinkClick(link.title)}
-            >
-              {link.title != "Contact" && (
-                <a href={`#${link.id}`}>{link.title}</a>
-              )}
+          {navLinks.map((link, idx) => (
+            <li key={idx} onClick={() => handleNavLinkClick(link.title)}>
+              <a
+                href={`#${link.id}`}
+                className="relative text-xl  text-white font-bold cursor-pointer"
+              >
+                {active === link.title ? (
+                  <motion.span
+                    layoutId="underline"
+                    className="absolute bottom-0 left-0 w-full h-1 bg-white rounded-full top-6"
+                  />
+                ) : null}
+                {link.title}
+              </a>
             </li>
           ))}
         </ul>
 
         <Button
           type="primary"
-          className={` text-white font-bold bg-orange-600 ${
+          className={` text-white font-bold bg-orange-600  ${
             active === "Contact" ? "border-2 border-white" : ""
           }`}
           href="#Contact"
@@ -92,13 +96,13 @@ const Navbar = () => {
                   key={link.id}
                   className={`${
                     active === link.title
-                      ? "text-white border-b-2 border-orange-500"
+                      ? "text-white border-b-3 border-orange-500"
                       : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer`}
+                  } hover:text-white text-[18px] font-medium cursor-pointer `}
                   onClick={() => handleNavLinkClick(link.title)}
                 >
                   {link.title != "Contact" && (
-                    <a href={`#${link.id}`}>{link.title}</a>
+                    <a href={`#${link.id}`} >{link.title}</a>
                   )}
                 </li>
               ))}

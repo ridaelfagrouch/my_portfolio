@@ -134,7 +134,7 @@ const Hero = () => {
         </a>
       </div>
       <motion.div
-        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-5"
+        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-10"
         variants={sliderVariants}
         initial="initial"
         animate="animate"

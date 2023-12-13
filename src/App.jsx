@@ -7,7 +7,8 @@ import {
   Hero,
   Navbar,
   Works,
-  SocialMedia
+  SocialMedia,
+  Services
 } from "./components";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <About />
             <Experience />
             <Works />
+            <Services/>
             <Contact />
           </div>
         </div>

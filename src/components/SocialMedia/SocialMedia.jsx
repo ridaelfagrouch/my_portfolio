@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "antd";
 import {
   TwitterOutlined,
   LinkedinOutlined,
@@ -13,6 +12,7 @@ const socialMediaData = [
       <TwitterOutlined
         style={{ color: "#55acee", fontSize: "2.5rem" }}
         rev={undefined}
+        className="max-md:w-[1.5rem]"
       />
     ),
     href: "https://twitter.com/Rida34089360",
@@ -22,6 +22,7 @@ const socialMediaData = [
       <LinkedinOutlined
         style={{ color: "#0077b5", fontSize: "2.5rem" }}
         rev={undefined}
+        className="max-md:w-[1.5rem]"
       />
     ),
     href: "https://www.linkedin.com/in/rida-el-fagrouch-13b566142/",
@@ -31,6 +32,7 @@ const socialMediaData = [
       <GithubOutlined
         style={{ color: "#fff", fontSize: "2.5rem" }}
         rev={undefined}
+        className="max-md:w-[1.5rem]"
       />
     ),
     href: "https://github.com/ridaelfagrouch",
@@ -40,20 +42,25 @@ const socialMediaData = [
       <GoogleOutlined 
         style={{ color: "#fff", fontSize: "2.5rem" }}
         rev={undefined}
+        className="max-md:w-[1.5rem]"
       />
     ),
-    href: "#",
+    href:"mailto:elfagrouchrida21@gmail.com",
   }
 ];
 
 const SocialMedia = () => {
   return (
       <div className="fixed flex flex-col max-2xl:flex-row max-2xl:space-x-4 justify-center z-50 ">
-        {socialMediaData.map((item, index) => (
-          <div key={index} >
-            <Button type="link" href={item.href} icon={item.icon} target="_blank" rel="noopener noreferrer" className="hover:scale-75"/>
-          </div>
-        ))}
+        <ul className="flex flex-col space-y-1 max-xl:flex-row max-xl:space-x-2 max-xl:space-y-0">
+          {socialMediaData.map((item, index) => (
+            <li key={index} >
+              <a  href={item.href} target="_blank" rel="noopener noreferrer"  >
+                {item.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
   );
 };

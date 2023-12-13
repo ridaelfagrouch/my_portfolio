@@ -8,9 +8,9 @@ const Experience = () => {
   return (
     <section
       id="Experience"
-      className="relative w-full h-screen max-w-7xl flex flex-col justify-center items-center  text-White z-0"
+      className="relative w-full h-screen max-w-7xl flex flex-col justify-center items-center space-y-5  text-White"
     >
-      <div className="flex flex-col space-y-12 justify-center items-center w-full max-w-7xl">
+      <div className="flex flex-col space-y-10 justify-center items-center w-full max-w-7xl">
         <div className="w-full px-[5%]">
           <Divider style={{ color: "white", fontWeight: "bold" }}>
             Experience
@@ -50,7 +50,7 @@ const Experience = () => {
         </div>
         <div className="container2 flex justify-center ">
           <ul className="w-full">
-            <li>
+            <li className="Education">
               <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Software Engineer
               </h3>
@@ -61,7 +61,7 @@ const Experience = () => {
               <span className="date">2023</span>
               <span className="circle"></span>
             </li>
-            <li>
+            <li className="Education">
               <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Bachelor's degree
               </h3>
@@ -72,7 +72,7 @@ const Experience = () => {
               <span className="date">2019-2020</span>
               <span className="circle"></span>
             </li>
-            <li>
+            <li className="Education">
               <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Baccalaureate,
               </h3>
