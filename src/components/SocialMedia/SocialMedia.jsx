@@ -37,16 +37,16 @@ const socialMediaData = [
     ),
     href: "https://github.com/ridaelfagrouch",
   },
-  {
-    icon : (
-      <GoogleOutlined 
-        style={{ color: "#fff", fontSize: "2.5rem" }}
-        rev={undefined}
-        className="max-md:w-[1.5rem]"
-      />
-    ),
-    href:"mailto:elfagrouchrida21@gmail.com",
-  }
+  // {
+  //   icon : (
+  //     <GoogleOutlined 
+  //       style={{ color: "#fff", fontSize: "2.5rem" }}
+  //       rev={undefined}
+  //       className="max-md:w-[1.5rem]"
+  //     />
+  //   ),
+  //   href:"mailto:elfagrouchrida21@gmail.com",
+  // }
 ];
 
 const SocialMedia = () => {

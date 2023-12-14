@@ -46,7 +46,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50  bg-shadow-xl backdrop-blur-sm `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <ul className="list-none hidden md:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((link, idx) => (
             <li key={idx} onClick={() => handleNavLinkClick(link.title)}>
               <a
@@ -59,7 +59,7 @@ const Navbar = () => {
                     className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full top-6"
                   />
                 ) : null}
-                {link.title}
+                {link.title != "Contact" ? link.title : ""}
               </a>
             </li>
           ))}
@@ -76,7 +76,7 @@ const Navbar = () => {
           Contact Me
         </Button>
 
-        <div className="md:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
