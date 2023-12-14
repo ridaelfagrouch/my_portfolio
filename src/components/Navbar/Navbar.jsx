@@ -75,7 +75,6 @@ const Navbar = () => {
         >
           Contact Me
         </Button>
-
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}

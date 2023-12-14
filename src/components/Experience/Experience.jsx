@@ -111,7 +111,7 @@ const Experience = () => {
           </div>
         </div>
         <div className="w-full mt-5 mx-5 flex  items-center">
-          <ul class="list-disc">
+          <ul className="list-disc">
             <li className="text-[16px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px]">
               Engineered cross-platform mobile applications using{" "}
               <span className="font-bold">React Native</span>, ensuring a

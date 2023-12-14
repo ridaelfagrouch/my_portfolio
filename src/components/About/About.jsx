@@ -4,9 +4,10 @@ import myPhoto from "../../assets/photo/myPhoto.jpeg";
 import Lottie from "lottie-react";
 import animation from "../../assets/lottie_file/Animation_3.json";
 import { technologies } from "../../constants";
-import { motion, useInView, useAnimation } from "framer-motion";
+import { motion, useInView, useAnimationControls } from "framer-motion";
 
 const variants = {
+  // hidden: { opacity: 0, scale: 0 },
   initial: {
     x: -500,
     y: 100,
@@ -18,7 +19,7 @@ const variants = {
     y: 0,
     transition: {
       duration: 1,
-      // staggerChildren: 0.1,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -26,11 +27,10 @@ const variants = {
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px" });
-  const controls = useAnimation();
+  const controls = useAnimationControls();
 
   useEffect(() => {
     if (isInView) {
-      console.log("Animation should start now!: ", isInView);
       controls.start("visible");
     }
   }, [controls, isInView]);
@@ -43,11 +43,7 @@ const About = () => {
       ref={ref}
       animate={controls}
       initial="hidden"
-      variants={variants}
     >
-      {/* <div className="absolute w-full h-full flex justify-center items-center  opacity-5">
-        <Lottie animationData={animation} className="w-[100%]" />
-      </div> */}
       <motion.div
         variants={variants}
         className="flex w-full  space-x-5 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:space-x-0 max-xl:space-y-2 "
