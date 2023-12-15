@@ -31,26 +31,23 @@ const HorizontalScrollCarousel = () => {
             })}
           </motion.div>
         </div>
-        {/* <div className="absolute bottom-48 flex w-screen h-24 items-center justify-center">
-          <div className="scroll-wrapper">
-            {technologies.map((item) => (
-              <motion.div
-                key={item.name}
-                className="orb bg-white flex justify-center items-center rounded-full p-2 z-10 max-lg:p-0"
-              >
-                <img src={item.icon} className="max-lg:w-[25px]" />
-              </motion.div>
-            ))}
-            {technologies.map((item) => (
-              <motion.div
-                key={item.name}
-                className="orb bg-white flex justify-center items-center rounded-full p-2 z-10 max-lg:p-0"
-              >
-                <img src={item.icon} className="max-lg:w-[25px]" />
-              </motion.div>
-            ))}
+        <div className="absolute w-full xs:bottom-10 bottom-[200px] flex justify-center items-center">
+        <a href="#Services">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
           </div>
-        </div> */}
+        </a>
+      </div>
       </div>
     </section>
   );
@@ -79,61 +76,3 @@ const MyCard = ({ card }) => {
 };
 
 export default Works;
-
-const cards = [
-  {
-    // url: "/imgs/abstract/1.jpg",
-    title: "Title 1",
-    id: 1,
-  },
-  {
-    // url: "/imgs/abstract/2.jpg",
-    title: "Title 2",
-    id: 2,
-  },
-  {
-    // url: "/imgs/abstract/3.jpg",
-    title: "Title 3",
-    id: 3,
-  },
-  {
-    // url: "/imgs/abstract/4.jpg",
-    title: "Title 4",
-    id: 4,
-  },
-  {
-    // url: "/imgs/abstract/5.jpg",
-    title: "Title 5",
-    id: 5,
-  },
-  {
-    // url: "/imgs/abstract/6.jpg",
-    title: "Title 6",
-    id: 6,
-  },
-  {
-    // url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 7,
-  },
-  {
-    // url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 8,
-  },
-  {
-    // url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 9,
-  },
-  {
-    // url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 10,
-  },
-  {
-    // url: "/imgs/abstract/7.jpg",
-    title: "Title 7",
-    id: 11,
-  },
-];
