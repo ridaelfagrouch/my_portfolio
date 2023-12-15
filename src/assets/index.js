@@ -1,4 +1,4 @@
-import github from "./github.png";
+import github from "./tech/github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -18,8 +18,24 @@ import cplusplus from "./tech/cplusplus.png";
 import expressjs from "./tech/expressjs.png";
 import nestjs from "./tech/nestjs.png";
 import nextjs from "./tech/nextjs.png";
-import sass from "./tech/sass.png"
-import Atikia from "./Atikia.svg"
+import sass from "./tech/sass.png";
+import postgesql from "./tech/postgresql.png";
+import prisma from "./tech/prisma.png";
+import wordpress from "./tech/wordpress.png";
+import mariadb from "./tech/mariadb.png";
+import reactnative from "./tech/react-native.png";
+import mysql from "./tech/mysql.png";
+import Atikia from "./Atikia.svg";
+import born2beroot from "./projects/born2beroot/born2beroot.jpg";
+import cub3d from "./projects/cub3d/cub3d.png";
+import fdf from "./projects/fdf/fdf.png";
+import ft_transcendence from "./projects/ft_transcendence/ft_transcendence.jpeg";
+import inception from "./projects/inception/inception.jpg";
+import minishell from "./projects/minishell/minishell.jpg";
+import movie_landingPage from "./projects/Movie-LandingPage/movie-landingPage.png";
+import philosopher from "./projects/philosopher/philosopher.png";
+import todosApp from "./projects/todos app/todosApp.jpg";
+import webServer from "./projects/webServer/webServer.jpg";
 
 
 export {
@@ -43,5 +59,21 @@ export {
   nestjs,
   nextjs,
   sass,
-  Atikia
+  postgesql,
+  prisma,
+  wordpress,
+  mariadb,
+  reactnative,
+  mysql,
+  Atikia,
+  born2beroot,
+  cub3d,
+  fdf,
+  ft_transcendence,
+  inception,
+  minishell,
+  movie_landingPage,
+  philosopher,
+  todosApp,
+  webServer,
 };

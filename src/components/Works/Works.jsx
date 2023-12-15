@@ -1,6 +1,9 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { technologies } from "../../constants";
+import { Card } from 'antd';
+import { technologies, projects } from "../../constants";
+
+const { Meta } = Card;
 
 const Works = () => {
   return (
@@ -23,8 +26,8 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0  flex flex-col justify-center items-center">
         <div className="sticky top-0  max-w-[90%] flex h-screen items-center  overflow-hidden">
           <motion.div style={{ x }} className="flex gap-4">
-            {cards.map((card) => {
-              return <Card card={card} key={card.id} />;
+            {projects.map((card) => {
+              return <MyCard card={card} key={card.id} />;
             })}
           </motion.div>
         </div>
@@ -53,24 +56,23 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
-const Card = ({ card }) => {
+const MyCard = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[350px] w-[350px] overflow-hidden bg-white rounded-lg"
+      className="relative w-[300px] h-[450px] overflow-hidden rounded-lg bg-white"
     >
-      <div
-        style={{
-          // backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-black backdrop-blur-lg">
-          {card.title}
-        </p>
+      <img alt="example" src={card.image} className="w-full h-full object-fill" />
+      <div className="absolute bottom-0 p-4 bg-white w-full flex flex-col text-black justify-center items-center space-y-2 bg-opacity-90">
+        <h2 className="font-bold text-xl">{card.name}</h2>
+        <h3 className="text-sm">{card.description}</h3>
+        <div className="w-full h-full grid grid-cols-6 justify-center items-center">
+          {card.tech.map(
+            (item) => (
+              <img src={item.icon} className="w-[35px]" />
+            )
+          )}
+        </div>
       </div>
     </div>
   );

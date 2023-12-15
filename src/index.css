@@ -240,12 +240,6 @@ section {
    border-top: 1px solid white;
 }
 
-
-/* .contact {
-	display: flex;
-	align-items: center;
-	gap: 50px;
-  } */
   
   @media only screen and (max-width: 768px) {
 	.contact {
@@ -324,3 +318,4 @@ section {
 	}
   }
   
+

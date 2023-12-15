@@ -76,7 +76,7 @@ const Contact = () => {
           <textarea rows={8} placeholder="Message" name="message"/>
           <button
           type="submit"
-          className={` text-white font-bold bg-orange-600 h-10 flex justify-center items-center`}
+          className={` text-white font-bold bg-orange-600 h-10 flex justify-center items-center rounded-md`}
         >
           Submit
         </button>
