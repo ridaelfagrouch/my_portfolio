@@ -30,9 +30,9 @@ const socialMediaData = [
   {
     icon: (
       <GithubOutlined
-        style={{ color: "#fff", fontSize: "2.5rem" }}
+        style={{ fontSize: "2.5rem" }}
         rev={undefined}
-        className="max-md:w-[1.5rem]"
+        className="max-md:w-[1.5rem] dark:text-white"
       />
     ),
     href: "https://github.com/ridaelfagrouch",

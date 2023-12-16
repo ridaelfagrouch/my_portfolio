@@ -12,20 +12,20 @@ const Experience = () => {
     >
       <div className="flex flex-col space-y-12 justify-center items-center w-full max-w-7xl">
         <div className="w-full px-[5%]">
-          <Divider style={{ color: "white", fontWeight: "bold" }}>
+          <Divider style={{ fontWeight: "bold" }} className="text-primary dark:text-white">
             Experience
           </Divider>
         </div>
         <div className="container2 flex justify-center ">
-          <ul className="w-[100%] ">
-            <li>
-              <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+          <ul className="w-[100%] text-white dark:text-primary">
+            <li className="bg-primary dark:bg-white">
+              <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Mobile Developer
               </h3>
-              <h2 className="text-[14px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+              <h2 className="text-[14px] max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Four month Internship - Atikia company
               </h2>
-              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
                 Engineered cross-platform mobile applications, ensuring a
                 consistent and responsive user experience on both iOS and
                 Android platforms{" "}
@@ -44,39 +44,39 @@ const Experience = () => {
       </div>
       <div className="flex flex-col justify-center items-center  space-y-12 w-full max-w-7xl">
         <div className="w-full px-[5%]">
-          <Divider style={{ color: "white", fontWeight: "bold" }}>
+          <Divider style={{ fontWeight: "bold" }} className="text-primary dark:text-white">
             Education
           </Divider>
         </div>
         <div className="container2 flex justify-center ">
-          <ul className="w-full">
-            <li className="Education">
-              <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+          <ul className="w-full text-white dark:text-primary">
+            <li className="Education bg-primary dark:bg-white drop-shadow-2xl">
+              <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Software Engineer
               </h3>
-              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
                 Student in third year computer engineering, school 1337 (42
                 Network) Khouribga-morocco{" "}
               </p>
               <span className="date">2023</span>
               <span className="circle"></span>
             </li>
-            <li className="Education">
-              <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+            <li className="Education bg-primary dark:bg-white drop-shadow-2xl">
+              <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Bachelor's degree
               </h3>
-              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
                 Bachelor's degree, physics-chemistry science,
                 mechanical-energetic university of Sciences Rabat-morocco{" "}
               </p>
               <span className="date">2019-2020</span>
               <span className="circle"></span>
             </li>
-            <li className="Education">
-              <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+            <li className="Education bg-primary dark:bg-white drop-shadow-2xl">
+              <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Baccalaureate,
               </h3>
-              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+              <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
                 Baccalaureate in experimental science, with honors, lycee ibn al
                 haytham tata-morocco{" "}
               </p>

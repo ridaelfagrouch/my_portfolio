@@ -180,30 +180,6 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "TodosApp",
-    description:
-      "Created a full-stack Todos app with React Native, Express.js, and MySQL, featuring CRUD operations and real-time updates.",
-    tech: [
-      {
-        icon: reactnative,
-      },
-      {
-        icon: javascript,
-      },
-      {
-        icon: css,
-      },
-      {
-        icon: expressjs,
-      },
-      {
-        icon: mysql,
-      },
-    ],
-    image: todosApp,
-    source_code_link: "https://github.com/",
-  },
-  {
     name: "Inception",
     description:
       "Proficiently utilized Docker for streamlined system administration.",
@@ -228,6 +204,30 @@ const projects = [
       },
     ],
     image: inception,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "TodosApp",
+    description:
+      "Created a full-stack Todos app with React Native, Express.js, and MySQL, featuring CRUD operations and real-time updates.",
+    tech: [
+      {
+        icon: reactnative,
+      },
+      {
+        icon: javascript,
+      },
+      {
+        icon: css,
+      },
+      {
+        icon: expressjs,
+      },
+      {
+        icon: mysql,
+      },
+    ],
+    image: todosApp,
     source_code_link: "https://github.com/",
   },
   {

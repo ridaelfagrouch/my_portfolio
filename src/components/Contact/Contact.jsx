@@ -55,15 +55,11 @@ const Contact = () => {
       // initial="initial"
       // whileInView="animate"
     >
-      <div className="textContainer w-full" >
+      <div className="textContainer w-full text-primary dark:text-white" >
         <h1 >Let’s work together</h1>
         <div className="item" >
-          <h2>Mail</h2>
+          <h2>Email</h2>
           <span>elfagrouchrida21@gmail.com</span>
-        </div>
-        <div className="item" >
-          <h2>Phone</h2>
-          <span>+212 681225777</span>
         </div>
       </div>
       <div className="formContainer w-full">
@@ -71,9 +67,9 @@ const Contact = () => {
           ref={formRef}
           onSubmit={sendEmail}
         >
-          <input type="text" required placeholder="Your Name" name="name"/>
-          <input type="email" required placeholder="Your Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
+          <input type="text" required placeholder="Your Name" name="name" className="border-2 border-primary dark:border-white "/>
+          <input type="email" required placeholder="Your Email" name="email" className="border-2 border-primary dark:border-white"/>
+          <textarea rows={8} placeholder="Message" name="message" className="border-2 border-primary dark:border-white"/>
           <button
           type="submit"
           className={` text-white font-bold bg-orange-600 h-10 flex justify-center items-center rounded-md`}

@@ -4,6 +4,7 @@ import { navLinks } from "../../constants";
 import { menu, close } from "../../assets";
 import { Button } from "antd";
 import { motion } from "framer-motion";
+import DarkMode from "../DarkMode/DarkMode";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -51,7 +52,7 @@ const Navbar = () => {
             <li key={idx} onClick={() => handleNavLinkClick(link.title)}>
               <a
                 href={`#${link.id}`}
-                className="relative text-xl  text-white font-bold cursor-pointer"
+                className="relative text-xl  dark:text-white font-bold cursor-pointer"
               >
                 {active === link.title ? (
                   <motion.span
@@ -64,7 +65,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className="flex flex-row gap-5 justify-center items-center">
 
+         <DarkMode/>         
         <Button
           type="primary"
           className={` text-white font-bold bg-orange-600  ${
@@ -75,6 +78,7 @@ const Navbar = () => {
         >
           Contact Me
         </Button>
+        </div>
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -82,8 +86,6 @@ const Navbar = () => {
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
-
-          {/* mobile mode ---------------------------------------------------------------------------- */}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
@@ -107,7 +109,6 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          {/* ---------------------------------------------------------------------------- */}
         </div>
       </div>
     </nav>

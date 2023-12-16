@@ -31,7 +31,7 @@ const About = () => {
   return (
     <section
       id="About"
-      className="relative w-full max-w-7xl flex flex-col justify-center items-center space-y-4 text-White  py-4 "
+      className="relative w-full max-w-7xl flex flex-col justify-center items-center space-y-4 max-xl:space-y-0 text-White  py-4 "
       // ref={ref}
       // variants={variants}
       // initial="initial"
@@ -41,7 +41,7 @@ const About = () => {
         className="flex w-full  space-x-5 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:space-x-0 max-xl:space-y-4 "
       >
         <div
-          className="w-1/4  h-full max-xl:hidden  bg-primary  rounded-lg flex justify-center items-center p-[2%] shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+          className="w-1/4  h-full max-xl:hidden bg-primary dark:bg-white  rounded-lg flex justify-center items-center p-[2%] drop-shadow-2xl"
         >
           <Image
             width={200}
@@ -52,35 +52,35 @@ const About = () => {
           />
         </div>
         <div
-          className="w-[90%] hidden max-xl:flex h-[150px]  bg-primary  rounded-lg justify-center items-center p-[2%] shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+          className="w-[90%] hidden max-xl:flex h-[150px] bg-primary  dark:bg-white  rounded-lg justify-center items-center p-[2%] drop-shadow-2xl"
         >
           <Avatar size={100} className=" bg-white"/>
         </div>
         <div
-          className=" w-3/4 max-xl:w-[90%] bg-primary rounded-lg flex flex-col justify-center p-[4%] space-y-3 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+          className=" w-3/4 max-xl:w-[90%] bg-primary dark:bg-white rounded-lg flex flex-col justify-center p-[4%] space-y-3 drop-shadow-2xl"
         >
-          <h1 className="max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+          <h1 className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             🚀 Hey there!, I am{" "}
             <span className="text-orange-600 font-bold text-2xl max-xl:text-xl max-md:text-[12px] max-sm:text-[10px]">
               Rida El Fagrouch
             </span>
             .
           </h1>
-          <p className="max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+          <p className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             {" "}
             I'm a{" "}
-            <span className="font-bold ">
+            <span className="text-white dark:text-primary font-bold ">
               Full Stack Web & Mobile Developer
             </span>{" "}
             from Morocco passionate about crafting efficient and elegant
             solutions.
           </p>
-          <p className="max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+          <p className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             💻 With expertise in Frontend and Backend technologies, I specialize
             in creating seamless user experiences. I embrace simplicity in
             design and functionality.
           </p>
-          <p className="max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
+          <p className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             {" "}
             🌍 Let's connect and discuss how I can bring your ideas to life with
             clean, minimalist, and effective code.
@@ -88,52 +88,52 @@ const About = () => {
         </div>
       </div>
       <div
-        className="flex w-full max-xl:flex-col max-xl:justify-center max-xl:items-center  space-x-5 max-xl:space-x-0 max-xl:space-y-4"
+        className="flex  w-full max-xl:flex-col max-xl:justify-center max-xl:items-center  space-x-5 max-xl:space-x-0 max-xl:space-y-4 max-xl:pb-4"
       >
         <div
-          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-white h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
         >
-          <h1 className="text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
+          <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
             30+
           </h1>
-          <h1 className="text-center ">Completed Projects</h1>
+          <h1 className="text-center text-white dark:text-primary">Completed Projects</h1>
         </div>
         <div
-          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-white h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
         >
-          <h1 className="text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
+          <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
             3+
           </h1>
-          <h1 className="text-center">Years</h1>
+          <h1 className="text-center text-white dark:text-primary">Years</h1>
         </div>
         <div
           className="xl:hidden flex flex-row justify-between w-2/3 max-xl:w-[90%] space-x-3"
         >
           <div
-            className="w-1/2  bg-primary h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+            className="w-1/2  bg-primary dark:bg-white h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
           >
-            <h1 className="text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
+            <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
               30+
             </h1>
-            <h1 className="text-center max-md:text-[10px]">
+            <h1 className="text-white dark:text-primary text-center max-md:text-[10px]">
               Completed Projects
             </h1>
           </div>
           <div
-            className="w-1/2   bg-primary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+            className="w-1/2   bg-primary dark:bg-white h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
           >
-            <h1 className="text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
+            <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
               3+
             </h1>
             <h1 className="text-center max-md:text-[10px]">Years</h1>
           </div>
         </div>
         <div
-          className="w-3/5 max-xl:w-[90%] bg-primary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)]"
+          className="w-3/5 max-xl:w-[90%] bg-primary dark:bg-white h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
         >
           <div  className="w-full">
             <div className="text-3xl text-left leading-tight h-3">“</div>
-            <p className=" text-center px-5 max-md:text-[10px]">
+            <p className="text-white dark:text-primary  text-center px-5 max-md:text-[10px]">
               Make it work, make it right, make it fast.
             </p>
             <div className="text-3xl text-right leading-tight h-3 -mt-3">”</div>
@@ -149,15 +149,15 @@ const About = () => {
         className="flex w-full max-xl:flex-col max-xl:justify-center max-xl:items-center  space-x-5 max-xl:space-x-0 "
       >
         <div
-          className="w-full max-xl:w-[90%] bg-primary h-full rounded-lg flex flex-col justify-center items-center space-y-4 p-[4%] shadow-[0_5px_20px_rgba(255,_255,_255,_0.2)] overflow-hidden "
+          className="w-full max-xl:w-[90%] bg-primary dark:bg-white h-full rounded-lg flex flex-col justify-center items-center space-y-4 p-[4%] drop-shadow-2xl overflow-hidden "
         >
-          <h1 className="max-md:text-[10px]">My Tech Stack</h1>
+          <h1 className="text-white dark:text-primary max-md:text-[10px] font-bold">My Tech Stack</h1>
           <div  className="container">
             <div  className="scroll-wrapper">
               {technologies.map((item) => (
                 <div
                   key={item.name}
-                  className="orb bg-white flex justify-center items-center rounded-full p-2 z-10 max-lg:p-0"
+                  className="orb bg-white dark:bg-white-100 flex justify-center items-center rounded-full p-2 z-10 max-lg:p-0"
                 >
                   <img src={item.icon} className="max-lg:w-[25px]" />
                 </div>
@@ -165,7 +165,7 @@ const About = () => {
               {technologies.map((item) => (
                 <div
                   key={item.name}
-                  className="orb bg-white flex justify-center items-center rounded-full p-2 z-10 max-lg:p-0"
+                  className="orb bg-white dark:bg-white-100 flex justify-center items-center rounded-full p-2 z-10 max-lg:p-0"
                 >
                   <img src={item.icon} className="max-lg:w-[25px]" />
                 </div>

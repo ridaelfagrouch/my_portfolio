@@ -67,8 +67,6 @@ const Hero = () => {
     setIsModalOpen(false);
   };
 
-  
-
   return (
     <section id="Home" className={`relative w-full  overflow-hidden`}>
       <div className="max-w-7xl h-full mx-auto flex flex-row justify-between items-center space-x-2 py-5 max-2xl:relative ">
@@ -80,7 +78,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={textVariants}
-            className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
+            className="dark:text-white text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
           >
             Hello, I'm
           </motion.h1>
@@ -92,7 +90,7 @@ const Hero = () => {
           </motion.h1>
           <motion.h1
             variants={textVariants}
-            className="text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
+            className="dark:text-white text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
           >
             Full Stack Js Developer
           </motion.h1>
@@ -113,7 +111,7 @@ const Hero = () => {
           variants={textVariants}
           className="w-[50%] max-2xl:absolute max-2xl:w-full "
         >
-          <Lottie animationData={animation} className="w-[100%] max-2xl:z-[-1] max-2xl:opacity-20" />
+          <Lottie animationData={animation} className="w-[100%] max-2xl:z-[-1]  max-2xl:opacity-20" />
         </motion.div>
       </div>
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
@@ -134,7 +132,7 @@ const Hero = () => {
         </a>
       </div>
       <motion.div
-        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-[0.15]"
+        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen dark:text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-[0.15]"
         variants={sliderVariants}
         initial="initial"
         animate="animate"
