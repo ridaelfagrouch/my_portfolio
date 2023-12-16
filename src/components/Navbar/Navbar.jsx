@@ -4,7 +4,7 @@ import { navLinks } from "../../constants";
 import { menu, close } from "../../assets";
 import { Button } from "antd";
 import { motion } from "framer-motion";
-import DarkMode from "../DarkMode/DarkMode";
+import {DarkMode, LanguageSwitcher} from "../../components"
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -62,21 +62,22 @@ const Navbar = () => {
               </a>
             </li>
           ))}
+          <Button
+            type="primary"
+            className={` text-white font-bold bg-orange-600  ${
+              active === "Contact" ? "border-2 border-white" : ""
+            } hidden lg:flex`}
+            href="#Contact"
+            onClick={() => handleNavLinkClick("Contact")}
+          >
+            Contact Me
+          </Button>
         </ul>
         <div className="flex flex-row gap-5 justify-center items-center">
-
-         <DarkMode/>         
-        <Button
-          type="primary"
-          className={` text-white font-bold bg-orange-600  ${
-            active === "Contact" ? "border-2 border-white" : ""
-          }`}
-          href="#Contact"
-          onClick={() => handleNavLinkClick("Contact")}
-        >
-          Contact Me
-        </Button>
+          <DarkMode />
+          <LanguageSwitcher />
         </div>
+        
         <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
@@ -95,16 +96,26 @@ const Navbar = () => {
                   key={link.id}
                   className={`${
                     active === link.title
-                      ? "text-white border-b-3 border-orange-500"
+                      ? "text-white border-b-2 border-orange-500"
                       : "text-secondary"
                   } hover:text-white text-[18px] font-medium cursor-pointer `}
                   onClick={() => handleNavLinkClick(link.title)}
                 >
                   {link.title != "Contact" && (
-                    <a href={`#${link.id}`} >{link.title}</a>
+                    <a href={`#${link.id}`}>{link.title}</a>
                   )}
                 </li>
               ))}
+            <Button
+              type="primary"
+              className={` text-white font-bold bg-orange-600  ${
+                active === "Contact" ? "border-2 border-white" : ""
+              }`}
+              href="#Contact"
+              onClick={() => handleNavLinkClick("Contact")}
+            >
+              Contact Me
+            </Button>
             </ul>
           </div>
         </div>

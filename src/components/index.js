@@ -6,5 +6,7 @@ import Works from "./Works/Works";
 import Contact from "./Contact/Contact";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import Services from "./Services/Services";
+import DarkMode from "./DarkMode/DarkMode";
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 
-export { Hero, Navbar, About, Experience, Works, Contact, SocialMedia, Services};
+export { Hero, Navbar, About, Experience, Works, Contact, SocialMedia, Services, DarkMode, LanguageSwitcher};
