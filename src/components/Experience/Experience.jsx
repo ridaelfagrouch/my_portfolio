@@ -12,13 +12,16 @@ const Experience = () => {
     >
       <div className="flex flex-col space-y-12 justify-center items-center w-full max-w-7xl">
         <div className="w-full px-[5%]">
-          <Divider style={{ fontWeight: "bold" }} className="text-primary dark:text-white">
+          <Divider
+            style={{ fontWeight: "bold" }}
+            className="text-primary dark:text-white"
+          >
             Experience
           </Divider>
         </div>
         <div className="container2 flex justify-center ">
           <ul className="w-[100%] text-white dark:text-primary">
-            <li className="bg-primary dark:bg-white">
+            <li className="bg-primary dark:bg-whitePrimary">
               <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Mobile Developer
               </h3>
@@ -44,13 +47,16 @@ const Experience = () => {
       </div>
       <div className="flex flex-col justify-center items-center  space-y-12 w-full max-w-7xl">
         <div className="w-full px-[5%]">
-          <Divider style={{ fontWeight: "bold" }} className="text-primary dark:text-white">
+          <Divider
+            style={{ fontWeight: "bold" }}
+            className="text-primary dark:text-white"
+          >
             Education
           </Divider>
         </div>
         <div className="container2 flex justify-center ">
           <ul className="w-full text-white dark:text-primary">
-            <li className="Education bg-primary dark:bg-white drop-shadow-2xl">
+            <li className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl">
               <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Software Engineer
               </h3>
@@ -61,7 +67,7 @@ const Experience = () => {
               <span className="date">2023</span>
               <span className="circle"></span>
             </li>
-            <li className="Education bg-primary dark:bg-white drop-shadow-2xl">
+            <li className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl">
               <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Bachelor's degree
               </h3>
@@ -72,7 +78,7 @@ const Experience = () => {
               <span className="date">2019-2020</span>
               <span className="circle"></span>
             </li>
-            <li className="Education bg-primary dark:bg-white drop-shadow-2xl">
+            <li className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl">
               <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 Baccalaureate,
               </h3>

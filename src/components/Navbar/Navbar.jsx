@@ -40,8 +40,6 @@ const Navbar = () => {
     };
   }, []);
 
-  
-
   return (
     <nav
       className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50  bg-shadow-xl backdrop-blur-sm `}

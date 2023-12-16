@@ -4,9 +4,13 @@ module.exports = {
   mode: "jit",
   darkMode: "class",
   theme: {
+    fill: {
+      current: 'currentColor',
+    },
     extend: {
       colors: {
-        primary: "#000",
+        primary: "#121212",
+        whitePrimary : "#EAEAEA",
         secondary: "#aaa6c3",
         tertiary: "#151030",
         "black-100": "#100d25",

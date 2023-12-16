@@ -1,66 +1,63 @@
-import React, {useState, useEffect, useRef} from "react";
-import Sun from "./Sun.svg";
-import Moon from "./Moon.svg";
+import React, { useState, useEffect, useRef } from "react";
 
 const DarkMode = () => {
-    const ref = useRef()
-    const [theme, setTheme] = useState(
-        localStorage.getItem("theme")
-    );
-    const element = document.documentElement;
-    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const ref = useRef();
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+  const element = document.documentElement;
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-    // useEffect(() => {
-    //     if (theme === 'dark') {
-    //         ref.defaultChecked = true;
-    //     } else {
-    //         ref.defaultChecked = false;
-    //     }
-    // }, [])
-
-    useEffect(() => {
-        switch (theme) {
-            case 'dark':
-                element.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                break;
-            case 'light':
-                element.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                break;
-            default:
-                localStorage.removeItem('theme');
-                break;
-        }
-    }, [theme]);
-
-    const handleThemeSwitch = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
+  useEffect(() => {
+    switch (theme) {
+      case "dark":
+        element.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        break;
+      case "light":
+        element.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        break;
+      default:
+        localStorage.removeItem("theme");
+        break;
     }
+  }, [theme]);
 
-    function onWindowMatch() {
-        if(localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)) { 
-            element.classList.add('dark');
-        }else
-        {
-            element.classList.remove('dark');
-        }
+  const handleThemeSwitch = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  function onWindowMatch() {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && darkQuery.matches)
+    ) {
+      element.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
     }
+  }
 
-    onWindowMatch();
+  onWindowMatch();
 
   return (
-      <div className="daynight ">
-        <label htmlFor="checkbox">
-          <input ref={ref} type="checkbox" name="" id="checkbox" defaultChecked onClick={handleThemeSwitch} />
-          <div className="toggle">
-            <div className="cloud"></div>
-            <div className="star"></div>
-            <div className="sea"></div>
-            <div className="mountains"></div>
-          </div>
-        </label>
-      </div>
+    <div className="daynight ">
+      <label htmlFor="checkbox">
+        <input
+          ref={ref}
+          type="checkbox"
+          name=""
+          id="checkbox"
+          defaultChecked={theme === "dark"}
+          onClick={handleThemeSwitch}
+        />
+        <div className="toggle">
+          <div className="cloud"></div>
+          <div className="star"></div>
+          <div className="sea"></div>
+          <div className="mountains"></div>
+        </div>
+      </label>
+    </div>
   );
 };
 

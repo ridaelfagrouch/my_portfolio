@@ -1,30 +1,11 @@
 import { useRef, useState } from "react";
-// import { motion, useInView } from "framer-motion";
 import { message } from "antd";
 import emailjs from "@emailjs/browser";
 
-const variants = {
-  initial: {
-    x: -500,
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
 
 const Contact = () => {
-  // const ref = useRef();
   const formRef = useRef();
   const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,10 +18,10 @@ const Contact = () => {
         "qERpG8dZ1r-79ZIQL"
       )
       .then(
-        (result) => {
+        () => {
           message.success('This email is successfully sent')
         },
-        (error) => {
+        () => {
           setError(true);
         }
       );
@@ -48,12 +29,8 @@ const Contact = () => {
 
   return (
     <section
-      // ref={ref}
       id='Contact'
       className="contact w-full max-w-7xl flex flex-row justify-center items-center px-4"
-      // variants={variants}
-      // initial="initial"
-      // whileInView="animate"
     >
       <div className="textContainer w-full text-primary dark:text-white" >
         <h1 >Let’s work together</h1>
