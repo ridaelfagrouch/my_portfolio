@@ -8,7 +8,7 @@ import {DarkMode, LanguageSwitcher} from ".."
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  const { i18n } = useTranslation();
+  const {t, i18n } = useTranslation();
   const NavLinks = i18n.language === "en" ? navLinks : navLinksFr;
   const [active, setActive] = useState(NavLinks[0].id);
   const [toggle, setToggle] = useState(false);
@@ -76,7 +76,7 @@ const Navbar = () => {
             href="#Contact"
             onClick={() => handleNavLinkClick("Contact")}
           >
-            Contact Me
+            {t("navbar.contactMe")}
           </Button>
         </ul>
         <div className="flex flex-row gap-5 justify-center items-center">
@@ -120,7 +120,7 @@ const Navbar = () => {
               href="#Contact"
               onClick={() => handleNavLinkClick("Contact")}
             >
-              Contact Me
+              {t("navbar.contactMe")}
             </Button>
             </ul>
           </div>

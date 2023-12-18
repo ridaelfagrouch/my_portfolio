@@ -4,5 +4,8 @@
         "title": "Full Stack JavaScript Developer",
         "resume": "Resume",
         "animTitle": "Web & Mobile Developer"
+    },
+    "navbar": {
+        "contactMe": "Contact Me"
     }
 }
