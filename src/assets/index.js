@@ -1,6 +1,8 @@
 import github from "./tech/github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import close_light from "./close_light.svg";
+import menu_light from "./menu_light.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -42,6 +44,8 @@ export {
   github,
   menu,
   close,
+  close_light,
+  menu_light,
   css,
   docker,
   figma,

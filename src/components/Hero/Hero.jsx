@@ -14,6 +14,7 @@ import "@react-pdf-viewer/print/lib/styles/index.css";
 import { themePlugin } from "@react-pdf-viewer/theme";
 import Lottie from "lottie-react";
 import animation from "../../assets/lottie_file/Animation_2.json";
+import { useTranslation } from "react-i18next";
 
 const sliderVariants = {
   initial: {
@@ -58,6 +59,7 @@ const Hero = () => {
   const newPlugin = defaultLayoutPlugin();
   const printPluginInstance = printPlugin();
   const themePluginInstance = themePlugin();
+  const { t } = useTranslation();
   
   const showModal = () => {
     setIsModalOpen(true);
@@ -74,13 +76,13 @@ const Hero = () => {
           initial="initial"
           animate="animate"
           variants={textVariants}
-          className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:w-full max-sm:gap-3"
+          className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:w-full max-sm:gap-3 max-lg:text-center"
         >
           <motion.h1
             variants={textVariants}
             className="dark:text-white text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
           >
-            Hello, I'm
+            {t("hero.greeting")}
           </motion.h1>
           <motion.h1
             variants={textVariants}
@@ -90,9 +92,9 @@ const Hero = () => {
           </motion.h1>
           <motion.h1
             variants={textVariants}
-            className="dark:text-white text-5xl font-bold max-md:text-4xl max-sm:text-2xl"
+            className="dark:text-white text-5xl font-bold max-md:text-4xl max-sm:text-2xl "
           >
-            Full Stack Js Developer
+           {t("hero.title")}
           </motion.h1>
           <motion.div variants={textVariants}>
             <Button
@@ -101,7 +103,7 @@ const Hero = () => {
               icon={<ExportOutlined />}
               onClick={showModal}
             >
-              Resume
+              {t("hero.resume")}
             </Button>
           </motion.div>
         </motion.div>
@@ -137,7 +139,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Web & Mobile Developer
+        {t("hero.animTitle")}
       </motion.div>
       <Modal
         open={isModalOpen}

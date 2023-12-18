@@ -1,0 +1,8 @@
+{
+    "hero": {
+        "greeting": "Hello, I'm",
+        "title": "Full Stack JavaScript Developer",
+        "resume": "Resume",
+        "animTitle": "Web & Mobile Developer"
+    }
+}

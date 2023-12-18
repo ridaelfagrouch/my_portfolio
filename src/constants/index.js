@@ -49,7 +49,7 @@ export const navLinks = [
   },
   {
     id: "Works",
-    title: "Work",
+    title: "Works",
   },
   {
     id: "Services",
@@ -60,6 +60,34 @@ export const navLinks = [
     title: "Contact",
   },
 ];
+
+export const navLinksFr = [
+  {
+    id: "Home",
+    title: "Accueil",
+  },
+  {
+    id: "About",
+    title: "À Propos",
+  },
+  {
+    id: "Experience",
+    title: "Expérience",
+  },
+  {
+    id: "Works",
+    title: "Travaux",
+  },
+  {
+    id: "Services",
+    title: "Services",
+  },
+  {
+    id: "Contact",
+    title: "Contact",
+  },
+];
+
 
 const technologies = [
   {
@@ -156,24 +184,31 @@ const projects = [
     tech: [
       {
         icon: typescript,
+        href: "https://www.typescriptlang.org/",
       },
       {
         icon: tailwind,
+        href: "https://tailwindcss.com/",
       },
       {
         icon: nextjs,
+        href: "https://nextjs.org/",
       },
       {
         icon: nestjs,
+        href: "https://nestjs.com/",
       },
       {
         icon: postgesql,
+        href: "https://www.postgresql.org/",
       },
       {
         icon: docker,
+        href: "https://www.docker.com/",
       },
       {
         icon: prisma,
+        href: "https://www.prisma.io/",
       },
     ],
     image: ft_transcendence,
@@ -186,25 +221,31 @@ const projects = [
     tech: [
       {
         icon: wordpress,
+        href: "https://wordpress.com/",
       },
       {
         icon: mariadb,
+        href: "https://mariadb.org/",
       },
       {
         icon: docker,
+        href: "https://www.docker.com/",
       },
       {
         icon: javascript,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         icon: html,
+        href: "https://www.w3schools.com/html/",
       },
       {
         icon: css,
+        href: "https://www.w3schools.com/css/",
       },
     ],
     image: inception,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/inception_42",
   },
   {
     name: "TodosApp",
@@ -213,22 +254,27 @@ const projects = [
     tech: [
       {
         icon: reactnative,
+        href: "https://reactnative.dev/",
       },
       {
         icon: javascript,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         icon: css,
+        href: "https://www.w3schools.com/css/",
       },
       {
         icon: expressjs,
+        href: "https://expressjs.com/",
       },
       {
         icon: mysql,
+        href: "https://www.mysql.com/",
       },
     ],
     image: todosApp,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/crud-todo-app",
   },
   {
     name: "movie LandingPage",
@@ -237,16 +283,19 @@ const projects = [
     tech: [
       {
         icon: javascript,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         icon: html,
+        href: "https://www.w3schools.com/html/",
       },
       {
         icon: css,
+        href: "https://www.w3schools.com/css/",
       },
     ],
     image: movie_landingPage,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/movieStore-landingPage",
   },
   {
     name: "WebServer",
@@ -255,10 +304,11 @@ const projects = [
     tech: [
       {
         icon: cplusplus,
+        href: "https://cplusplus.com/",
       },
     ],
     image: webServer,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/Webserv_42",
   },
   {
     name: "Minishell",
@@ -267,10 +317,11 @@ const projects = [
     tech: [
       {
         icon: c,
+        href: "https://www.w3schools.com/c/c_intro.php",
       },
     ],
     image: minishell,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/minishell_42",
   },
   {
     name: "Cub3d",
@@ -278,10 +329,11 @@ const projects = [
     tech: [
       {
         icon: c,
+        href: "https://www.w3schools.com/c/c_intro.php",
       },
     ],
     image: cub3d,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/cub3D_42",
   },
   {
     name: "Philosopher",
@@ -290,10 +342,11 @@ const projects = [
     tech: [
       {
         icon: c,
+        href: "https://www.w3schools.com/c/c_intro.php",
       },
     ],
     image: philosopher,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/philosophers_42",
   },
   {
     name: "Fdf",
@@ -301,18 +354,12 @@ const projects = [
     tech: [
       {
         icon: c,
+        href: "https://www.w3schools.com/c/c_intro.php",
       },
     ],
     image: fdf,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Born2beRoot",
-    description: "Managed and optimized system configurations.",
-    tech: [],
-    image: born2beroot,
-    source_code_link: "https://github.com/",
-  },
+    source_code_link: "https://github.com/ridaelfagrouch/FDF_42",
+  }
 ];
 
 export { technologies, projects };

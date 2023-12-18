@@ -55,28 +55,30 @@ const MyCard = ({ card }) => {
   return (
     <div
       key={card.key}
-      className="relative w-[300px] max-lg:w-[250px] h-[450px] overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out   hover:cursor-pointer border-2 border-primary dark:border-white "
+      className="relative w-[300px] max-lg:w-[250px] max-md:w-[200px] h-[450px] max-lg:h-[400px] max-md:h-[350px] overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
     >
       <img
         alt="example"
         src={card.image}
         className="w-full h-full object-fill"
       />
-      <div className="absolute bottom-0 p-4 bg-whitePrimary w-full flex flex-col text-black justify-center items-center space-y-2 bg-opacity-90">
-        <h2 className="font-bold text-xl">{card.name}</h2>
-        <h3 className="text-sm">{card.description}</h3>
+      <div className="absolute bottom-0 p-4 bg-whitePrimary w-full flex flex-col text-black justify-center items-center space-y-2 bg-opacity-90 translate-y-10 hover:translate-y-0  transition-transform duration-500">
+        <h2 className="font-bold text-xl max-lg:text-md max-md:text-sm">{card.name}</h2>
+        <h3 className="text-sm max-lg:text-[12px] max-md:text-[10px]">{card.description}</h3>
         <div className="w-full h-full grid grid-cols-6 justify-center items-center">
           {card.tech.map((item, index) => (
-            <img key={index} src={item.icon} className="w-[35px]" />
+            <a key={index} href={item.href} target="_blank" rel="noopener noreferrer" >
+              <img  src={item.icon} className="w-[35px] max-lg:w-[25px] max-md:w-[15px] hover:scale-125 transition ease-in-out" />
+            </a>
           ))}
         </div>
         <motion.div
-          className="flex w-full flex-row space-x-2 text-md font-bold"
+          className="flex w-full flex-row space-x-2 text-md max-lg:text-sm max-md:text-[12px]  font-bold"
           whileHover={{ scale: 1.2, originX: 0 }}
           transition={{ type: "", stiffness: 300 }}
         >
           <ArrowRightOutlined />
-          <a href={card.source_code_link}>Source Code</a>
+          <a href={card.source_code_link} target="_blank" rel="noopener noreferrer">Source Code</a>
         </motion.div>
       </div>
     </div>

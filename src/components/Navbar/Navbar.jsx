@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { styles } from "../../styles";
-import { navLinks } from "../../constants";
-import { menu, close } from "../../assets";
+import { navLinks, navLinksFr } from "../../constants";
+import { menu, close, close_light, menu_light } from "../../assets";
 import { Button } from "antd";
 import { motion } from "framer-motion";
-import {DarkMode, LanguageSwitcher} from "../../components"
+import {DarkMode, LanguageSwitcher} from ".."
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const { i18n } = useTranslation();
+  const NavLinks = i18n.language === "en" ? navLinks : navLinksFr;
+  const [active, setActive] = useState(NavLinks[0].id);
   const [toggle, setToggle] = useState(false);
-
+  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+  const Close = theme === "light" ? close_light : close;
+  const Menu = theme === "light"? menu_light : menu;
+ 
   const handleNavLinkClick = (title) => {
     setToggle(false);
   };
@@ -18,7 +24,7 @@ const Navbar = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
 
-      for (const link of navLinks) {
+      for (const link of NavLinks) {
         const section = document.getElementById(link.id);
         if (section) {
           const sectionTop = section.offsetTop;
@@ -27,7 +33,7 @@ const Navbar = () => {
             scrollPosition >= sectionTop &&
             scrollPosition < sectionTop + sectionHeight
           ) {
-            setActive(link.title);
+            setActive(link.id);
             break;
           }
         }
@@ -45,14 +51,14 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50  bg-shadow-xl backdrop-blur-sm `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <ul className="list-none hidden lg:flex flex-row gap-10">
-          {navLinks.map((link, idx) => (
+        <ul className="list-none hidden xl:flex flex-row gap-10">
+          {NavLinks.map((link, idx) => (
             <li key={idx} onClick={() => handleNavLinkClick(link.title)}>
               <a
                 href={`#${link.id}`}
                 className="relative text-xl  dark:text-white font-bold cursor-pointer"
               >
-                {active === link.title ? (
+                {active === link.id ? (
                   <motion.span
                     layoutId="underline"
                     className="absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full top-6"
@@ -74,13 +80,13 @@ const Navbar = () => {
           </Button>
         </ul>
         <div className="flex flex-row gap-5 justify-center items-center">
-          <DarkMode />
+          <DarkMode theme={theme} setTheme={setTheme}/>
           <LanguageSwitcher />
         </div>
         
-        <div className="lg:hidden flex flex-1 justify-end items-center">
+        <div className="xl:hidden flex flex-1 justify-end items-center">
           <img
-            src={toggle ? close : menu}
+            src={toggle ? Close : Menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
@@ -88,18 +94,18 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-primary`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-primary dark:bg-whitePrimary`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((link) => (
+              {NavLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title
-                      ? "text-white border-b-2 border-orange-500"
+                    active === link.id
+                      ? "text-white dark:text-primary border-b-2 border-orange-500"
                       : "text-secondary"
-                  } hover:text-white text-[18px] font-medium cursor-pointer `}
-                  onClick={() => handleNavLinkClick(link.title)}
+                  } hover:text-white dark:hover:text-primary text-[18px] font-medium cursor-pointer `}
+                  onClick={() => handleNavLinkClick(link.id)}
                 >
                   {link.title != "Contact" && (
                     <a href={`#${link.id}`}>{link.title}</a>

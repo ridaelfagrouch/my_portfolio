@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const DarkMode = () => {
-  const ref = useRef();
-  const [theme, setTheme] = useState(localStorage.getItem("theme"));
+
+type Prop = {
+  theme: string,
+  setTheme: (theme: string) => void
+}
+
+const DarkMode = ({theme, setTheme} : Prop) => {
+  const ref = useRef<HTMLInputElement>(null);
   const element = document.documentElement;
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
