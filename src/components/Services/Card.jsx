@@ -4,7 +4,7 @@ const Card = ({ item: { title, des, icon } }) => {
   return (
     <div className="w-full px-12 h-80 max-xl:h-60 max-lg:h-56  max-md:h-40 py-5 rounded-lg shadow-shadowOne flex  items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b dark:from-black hover:to-white-500 transition-colors duration-100 group border-2 border-primary dark:border-white hover:cursor-pointer">
       <div className="h-72 max-xl:h-52 max-lg:h-48  max-md:h-32 overflow-y-hidden">
-        <div className="flex h-full flex-col gap-10 max-xl:gap-5 max-md:gap-2 translate-y-16 max-lg:translate-y-10 group-hover:translate-y-0  transition-transform duration-500">
+        <div className="flex h-full flex-col gap-10 max-xl:gap-5 max-md:gap-2 translate-y-16 max-lg:translate-y-10 group-hover:-translate-y-8  transition-transform duration-500">
           <div className="w-10 h-8 flex flex-col justify-between">
             <span className="text-5xl max-xl:text-3xl max-md:text-xl text-orange-500">
               {icon}

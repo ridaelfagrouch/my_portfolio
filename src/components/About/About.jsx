@@ -1,10 +1,12 @@
 import React, { useRef} from "react";
 import { Image, Avatar } from "antd";
 import { technologies } from "../../constants";
+import { useTranslation } from "react-i18next";
 
 
 const About = () => {
   const ref = useRef();
+  const { t} = useTranslation();
 
   return (
     <section
@@ -26,7 +28,7 @@ const About = () => {
         </div>
         <div className=" w-3/4 max-xl:w-[90%] bg-primary dark:bg-whitePrimary rounded-lg flex flex-col justify-center p-[4%] space-y-3 drop-shadow-2xl">
           <h1 className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
-            🚀 Hey there!, I am{" "}
+            🚀{" "}{t("about.greeting")}{" "}
             <span className="text-orange-600 font-bold text-2xl max-xl:text-xl max-md:text-[12px] max-sm:text-[10px]">
               Rida El Fagrouch
             </span>
@@ -34,22 +36,18 @@ const About = () => {
           </h1>
           <p className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             {" "}
-            I'm a{" "}
+            {t("about.Im")}{" "}
             <span className="text-white dark:text-primary font-bold ">
-              Full Stack Web & Mobile Developer
+            {t("about.title")}
             </span>{" "}
-            from Morocco passionate about crafting efficient and elegant
-            solutions.
+            {t("about.from")}
           </p>
           <p className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
-            💻 With expertise in Frontend and Backend technologies, I specialize
-            in creating seamless user experiences. I embrace simplicity in
-            design and functionality.
+            💻 {t("about.subtitle")}
           </p>
           <p className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             {" "}
-            🌍 Let's connect and discuss how I can bring your ideas to life with
-            clean, minimalist, and effective code.
+            🌍 {t("about.contact")}
           </p>
         </div>
       </div>
@@ -59,14 +57,14 @@ const About = () => {
             30+
           </h1>
           <h1 className="text-center text-white dark:text-primary">
-            Completed Projects
+            {t("about.CompletedProjects")}
           </h1>
         </div>
         <div className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl">
           <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
             3+
           </h1>
-          <h1 className="text-center text-white dark:text-primary">Years</h1>
+          <h1 className="text-center text-white dark:text-primary">{t("about.Years")}</h1>
         </div>
         <div className="xl:hidden flex flex-row justify-between w-2/3 max-xl:w-[90%] space-x-3">
           <div className="w-1/2  bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl">
@@ -74,21 +72,21 @@ const About = () => {
               30+
             </h1>
             <h1 className="text-white dark:text-primary text-center max-md:text-[10px]">
-              Completed Projects
+              {t("about.CompletedProjects")}
             </h1>
           </div>
           <div className="w-1/2   bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl">
             <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
               3+
             </h1>
-            <h1 className="text-center max-md:text-[10px]">Years</h1>
+            <h1 className="text-center max-md:text-[10px]">{t("about.Years")}</h1>
           </div>
         </div>
         <div className="w-3/5 max-xl:w-[90%] bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl">
           <div className="w-full">
             <div className="text-3xl text-left leading-tight h-3">“</div>
             <p className="text-white dark:text-primary  text-center px-5 max-md:text-[10px]">
-              Make it work, make it right, make it fast.
+              {t("about.qoute")}
             </p>
             <div className="text-3xl text-right leading-tight h-3 -mt-3">”</div>
           </div>
@@ -102,7 +100,7 @@ const About = () => {
       <div className="flex w-full max-xl:flex-col max-xl:justify-center max-xl:items-center  space-x-5 max-xl:space-x-0 ">
         <div className="w-full max-xl:w-[90%] bg-primary dark:bg-whitePrimary h-full rounded-lg flex flex-col justify-center items-center space-y-4 p-[4%] drop-shadow-2xl overflow-hidden ">
           <h1 className="text-white dark:text-primary max-md:text-[10px] font-bold">
-            My Tech Stack
+            {t("about.techStack")}
           </h1>
           <div className="container">
             <div className="scroll-wrapper">

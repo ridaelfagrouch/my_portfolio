@@ -1,12 +1,62 @@
 {
-    "hero": {
-        "greeting": "Bonjour, je suis",
-        "title": "Développeur Full Stack JavaScript",
-        "resume": "CV",
-        "animTitle": "Développeur Web et mobile"
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "title": "Développeur Full Stack JavaScript",
+    "resume": "CV",
+    "animTitle": "Développeur Web et mobile"
+  },
+  "navbar": {
+    "contactMe": "Contactez Moi"
+  },
+  "about": {
+    "greeting": "Salut ! Je suis",
+    "Im": "Je suis un",
+    "title": "Développeur Web & Mobile Full Stack",
+    "from": "originaire du Maroc passionné par la création de solutions efficaces et élégantes.",
+    "subtitle": "Avec une expertise dans les technologies Frontend et Backend, je me spécialise dans la création d'expériences utilisateur fluides. J'adopte la simplicité dans la conception et la fonctionnalité.",
+    "contact": "Connectons-nous et discutons de la manière dont je peux donner vie à vos idées avec un code propre, minimaliste et efficace.",
+    "CompletedProjects": "Projets Terminés",
+    "Years": "Années",
+    "qoute": "Fais-le fonctionner, fais-le bien, fais-le rapidement.",
+    "techStack": "Ma pile technologique"
+  },
+  "experience": {
+    "Experience": "Expérience",
+    "Education": "Éducation",
+    "position": "Développeur Mobile",
+    "company": "Atikia",
+    "duration": "Stage de quatre mois",
+    "description": "Conception d'applications mobiles multiplateformes, garantissant une expérience utilisateur cohérente et réactive sur les plateformes iOS et Android.",
+    "readMoreLink": "En savoir plus",
+    "educationSection": {
+      "item1": {
+        "degree": "Ingénieur logiciel",
+        "description": "Étudiant en troisième année de génie informatique, école 1337 (42 Network) Khouribga-Maroc",
+        "date": "2023"
+      },
+      "item2": {
+        "degree": "Licence",
+        "description": "Licence en sciences physiques-chimiques, spécialité mécanique-énergétique, Université des Sciences de Rabat-Maroc",
+        "date": "2019-2020"
+      },
+      "item3": {
+        "degree": "Baccalauréat",
+        "description": "Baccalauréat en sciences expérimentales, avec mention, lycée Ibn al Haytham Tata-Maroc",
+        "date": "2014-2015"
+      }
     },
-    "navbar": {
-        "contactMe": "Contactez Moi"
+    "modalContent": {
+      "title": "Stage",
+      "content": {
+        "title": "Développeur Mobile",
+        "companyName": "Atikia Company - Maroc"
+      }
     }
-
+  },
+  "contact": {
+    "title": "Travaillons ensemble",
+    "email": "Votre adresse e-mail",
+    "name": "Votre nom",
+    "send": "Envoyer"
+  }
 }

@@ -1,7 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { projects } from "../../constants";
+import { projects, projectsFr } from "../../constants";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 const Works = () => {
   return (
@@ -16,15 +17,16 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const {t, i18n} = useTranslation();
+  const Projects  = i18n.language === "en" ? projects : projectsFr;
 
   return (
     <section id="Works" ref={targetRef} className="relative h-[300vh]">
       <div className="sticky top-0  flex flex-col justify-center items-center">
         <div className="sticky top-0  max-w-[90%] max-lg:max-w-[100%] flex h-screen items-center  overflow-hidden">
           <motion.div style={{ x }} className="flex gap-4">
-            {projects.map((card, index) => {
+            {Projects.map((card, index) => {
               return <MyCard card={card} key={index} />;
             })}
           </motion.div>
