@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button, Modal } from "antd";
 import { ExportOutlined } from "@ant-design/icons";
 import RidaCv from "../../assets/resume/ridaCv.pdf";
+import RidaCvFr from "../../assets/resume/cvRidaFr.pdf";
 import { Worker, Viewer } from "@react-pdf-viewer/core";
 import { fullScreenPlugin } from "@react-pdf-viewer/full-screen";
 import "@react-pdf-viewer/full-screen/lib/styles/index.css";
@@ -59,7 +60,9 @@ const Hero = () => {
   const newPlugin = defaultLayoutPlugin();
   const printPluginInstance = printPlugin();
   const themePluginInstance = themePlugin();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const MyResume = i18n.language === 'en' ? RidaCv : RidaCvFr; 
   
   const showModal = () => {
     setIsModalOpen(true);
@@ -150,7 +153,7 @@ const Hero = () => {
       >
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
           <Viewer
-            fileUrl={RidaCv}
+            fileUrl={MyResume}
             plugins={[
               newPlugin,
               fullScreenPluginInstance,

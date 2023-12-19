@@ -4,12 +4,9 @@ import { Atikia } from "../../../assets";
 import { useTranslation } from "react-i18next";
 import { Exp1ModalPointsEn, Exp1ModalPointsFr } from "../../../constants";
 
-type Prop = {
-  open: boolean;
-  setOpen: (value: boolean) => void;
-};
 
-const Exp1Modal = ({ open, setOpen }: Prop) => {
+
+const Exp1Modal = ({ open, setOpen }) => {
   const { t, i18n } = useTranslation();
 
   const ExpModalPoint =
