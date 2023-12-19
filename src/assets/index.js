@@ -32,10 +32,10 @@ import born2beroot from "./projects/born2beroot/born2beroot.jpg";
 import cub3d from "./projects/cub3d/cub3d.png";
 import fdf from "./projects/fdf/fdf.png";
 import ft_transcendence from "./projects/ft_transcendence/ft_transcendence.jpeg";
-import inception from "./projects/inception/inception.jpg";
+import inception from "./projects/inception/inception.webp";
 import minishell from "./projects/minishell/minishell.jpg";
 import movie_landingPage from "./projects/Movie-LandingPage/movie-landingPage.png";
-import philosopher from "./projects/philosopher/philosopher.png";
+import philosopher from "./projects/philosopher/philosophers.webp";
 import todosApp from "./projects/todos app/todosApp.jpg";
 import webServer from "./projects/webServer/webServer.jpg";
 
