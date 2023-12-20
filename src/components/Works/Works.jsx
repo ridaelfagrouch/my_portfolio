@@ -49,7 +49,7 @@ const MyCard = ({ card }) => {
   return (
     <div
       key={card.key}
-      className="relative w-[300px] max-lg:w-[250px] max-md:w-[200px] h-[450px] max-lg:h-[400px] max-md:h-[350px] overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
+      className="relative w-[300px] max-lg:w-[250px] max-md:w-[200px] h-[400px] max-md:h-[350px] overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
     >
       <div className="card">
         <div className="box1">

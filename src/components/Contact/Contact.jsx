@@ -2,21 +2,23 @@ import { useRef, useState } from "react";
 import { message } from "antd";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
+import { json } from "react-router-dom";
 
 const Contact = () => {
   const formRef = useRef();
   const [error, setError] = useState(false);
   const {t} = useTranslation();
 
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_i53o66b",
-        "template_8mm5ufk",
+        `${import.meta.env.VITE_EMAIL_SERVICE_ID}`,
+        `${import.meta.env.VITE_EMAIL_TEMPLATE_ID}`,
         formRef.current,
-        "qERpG8dZ1r-79ZIQL"
+        `${import.meta.env.VITE_EMAIL_PUBLIC_KEY}`
       )
       .then(
         () => {
