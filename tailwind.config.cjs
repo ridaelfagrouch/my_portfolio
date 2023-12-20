@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   darkMode: "class",
+  variants: {
+    extend: {
+      visibility: ["group-hover"],
+    },
+   },
   theme: {
     fill: {
       current: 'currentColor',

@@ -97,7 +97,7 @@ const Hero = () => {
             variants={textVariants}
             className="dark:text-white text-5xl font-bold max-md:text-4xl max-sm:text-2xl "
           >
-           {t("hero.title")}
+            {t("hero.title")}
           </motion.h1>
           <motion.div variants={textVariants}>
             <Button
@@ -116,23 +116,18 @@ const Hero = () => {
           variants={textVariants}
           className="w-[50%] max-2xl:absolute max-2xl:w-full "
         >
-          <Lottie animationData={animation} className="w-[100%] max-2xl:z-[-1]  max-2xl:opacity-20" />
+          <Lottie
+            animationData={animation}
+            className="w-[100%] max-2xl:z-[-1]  max-2xl:opacity-20"
+          />
         </motion.div>
       </div>
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#About">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
+          <div className="w-[35px] h-[64px] ">
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+            <div className="chevron"></div>
           </div>
         </a>
       </div>

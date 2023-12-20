@@ -41,7 +41,7 @@ const socialMediaData = [
 const SocialMedia = () => {
   return (
       <div className="fixed flex flex-col max-2xl:flex-row max-2xl:space-x-4 justify-center z-50 ">
-        <ul className="flex flex-col space-y-1 max-xl:flex-row max-xl:space-x-2 max-xl:space-y-0">
+        <ul className="flex flex-col space-y-4 max-xl:flex-row max-xl:space-x-4 max-xl:space-y-0">
           {socialMediaData.map((item, index) => (
             <li key={index} >
               <a  href={item.href} target="_blank" rel="noopener noreferrer"  >

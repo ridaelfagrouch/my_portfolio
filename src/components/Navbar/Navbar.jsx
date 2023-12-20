@@ -71,7 +71,7 @@ const Navbar = () => {
           <Button
             type="primary"
             className={` text-white font-bold bg-orange-600  ${
-              active === "Contact" ? "border-2 border-white" : ""
+              active === "Contact" ? "border-2 border-primary dark:border-white" : ""
             } hidden lg:flex`}
             href="#Contact"
             onClick={() => handleNavLinkClick("Contact")}

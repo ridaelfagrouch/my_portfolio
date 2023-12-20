@@ -18,8 +18,8 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-  const {t, i18n} = useTranslation();
-  const Projects  = i18n.language === "en" ? projects : projectsFr;
+  const { t, i18n } = useTranslation();
+  const Projects = i18n.language === "en" ? projects : projectsFr;
 
   return (
     <section id="Works" ref={targetRef} className="relative h-[300vh]">
@@ -33,19 +33,11 @@ const HorizontalScrollCarousel = () => {
         </div>
         <div className="absolute w-full xs:bottom-10 bottom-[200px] flex justify-center items-center">
           <a href="#Services">
-            <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                }}
-                className="w-3 h-3 rounded-full bg-secondary mb-1"
-              />
-            </div>
+          <div className="w-[35px] h-[64px] ">
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+            <div className="chevron"></div>
+          </div>
           </a>
         </div>
       </div>
@@ -59,29 +51,54 @@ const MyCard = ({ card }) => {
       key={card.key}
       className="relative w-[300px] max-lg:w-[250px] max-md:w-[200px] h-[450px] max-lg:h-[400px] max-md:h-[350px] overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
     >
-      <img
-        alt="example"
-        src={card.image}
-        className="w-full h-full object-fill"
-      />
-      <div className="absolute bottom-0 p-4 bg-whitePrimary w-full flex flex-col text-black justify-center items-center space-y-2 bg-opacity-90 translate-y-10 hover:translate-y-0  transition-transform duration-500">
-        <h2 className="font-bold text-xl max-lg:text-md max-md:text-sm">{card.name}</h2>
-        <h3 className="text-sm max-lg:text-[12px] max-md:text-[10px]">{card.description}</h3>
-        <div className="w-full h-full grid grid-cols-6 justify-center items-center">
-          {card.tech.map((item, index) => (
-            <a key={index} href={item.href} target="_blank" rel="noopener noreferrer" >
-              <img  src={item.icon} className="w-[35px] max-lg:w-[25px] max-md:w-[15px] hover:scale-125 transition ease-in-out" />
-            </a>
-          ))}
+      <div className="card">
+        <div className="box1">
+          <div className="w-full h-full">
+            <img src={card.image} className="w-full h-full object-fill" />
+          </div>
+          <div className="content1 opacity-95 flex flex-col space-y-4">
+            <h3 className="text-xl font-bold text-center max-lg:text-sm max-md:text-[12px]">
+              {" "}
+              {card.name}{" "}
+            </h3>
+            <p className="max-lg:text-[12px] max-md:text-[10px]">
+              {" "}
+              {card.description}
+            </p>
+            <div className="flex flex-col space-y-2">
+              <h3 className="text-lg font-bold  max-lg:text-sm max-md:text-[12px]">
+                {" "}
+                Tech:{" "}
+              </h3>
+              <div className="w-full h-full grid grid-cols-6 justify-center items-center">
+                {card.tech.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={item.icon}
+                      className="w-[35px] max-lg:w-[25px] max-md:w-[15px] hover:scale-125 transition ease-in-out"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="flex w-full flex-row space-x-2 text-md max-lg:text-sm max-md:text-[12px]  font-bold ">
+              <ArrowRightOutlined />
+              <a
+                href={card.source_code_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition ease-in-out"
+              >
+                Source Code
+              </a>
+            </div>
+          </div>
         </div>
-        <motion.div
-          className="flex w-full flex-row space-x-2 text-md max-lg:text-sm max-md:text-[12px]  font-bold"
-          whileHover={{ scale: 1.2, originX: 0 }}
-          transition={{ type: "", stiffness: 300 }}
-        >
-          <ArrowRightOutlined />
-          <a href={card.source_code_link} target="_blank" rel="noopener noreferrer">Source Code</a>
-        </motion.div>
       </div>
     </div>
   );

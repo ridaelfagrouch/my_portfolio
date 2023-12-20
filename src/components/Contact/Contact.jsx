@@ -21,6 +21,7 @@ const Contact = () => {
       .then(
         () => {
           message.success('This email is successfully sent')
+          formRef.current.reset();
         },
         () => {
           setError(true);
@@ -47,7 +48,7 @@ const Contact = () => {
         >
           <input type="text" required placeholder={t("contact.name")} name="name" className="border-2 border-primary dark:border-white "/>
           <input type="email" required placeholder={t("contact.email")} name="email" className="border-2 border-primary dark:border-white"/>
-          <textarea rows={8} placeholder="Message" name="message" className="border-2 border-primary dark:border-white"/>
+          <textarea rows={8} placeholder="Message" name="message" className="border-2 border-primary dark:border-white dark:text-white"/>
           <button
           type="submit"
           className={` text-white font-bold bg-orange-600 h-10 flex justify-center items-center rounded-md`}
