@@ -31,6 +31,7 @@ import {
   philosopher,
   todosApp,
   webServer,
+  portfolio
 } from "../assets";
 
 
@@ -241,6 +242,31 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
+    name: "portfolio",
+    description:
+      "Minimalist web experiences powered by React.js and styled with precision using Tailwind CSS",
+    tech: [
+      {
+        icon: reactjs,
+        href: "https://react.dev/"
+      },
+      {
+        icon: javascript,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        icon: tailwind,
+        href: "https://tailwindcss.com/",
+      },
+      {
+        icon: css,
+        href: "https://www.w3schools.com/css/",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/ridaelfagrouch/my_portfolio",
+  },
+  {
     name: "Inception",
     description:
       "Proficiently utilized Docker for streamlined system administration.",
@@ -425,6 +451,31 @@ const projectsFr = [
     ],
     image: ft_transcendence,
     source_code_link: "https://github.com/",
+  },
+  {
+    name: "portfolio",
+    description:
+      "Expériences Web minimalistes optimisées par React.js et stylisées avec précision à l'aide de Tailwind CSS.",
+    tech: [
+      {
+        icon: reactjs,
+        href: "https://react.dev/"
+      },
+      {
+        icon: javascript,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        icon: tailwind,
+        href: "https://tailwindcss.com/",
+      },
+      {
+        icon: css,
+        href: "https://www.w3schools.com/css/",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/ridaelfagrouch/my_portfolio",
   },
   {
     name: "Inception",

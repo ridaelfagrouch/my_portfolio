@@ -4,6 +4,21 @@ import { projects, projectsFr } from "../../constants";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
+const variants = {
+  initial: {
+    x: -300,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const Works = () => {
   return (
     <div className="w-full px-[5%]">
@@ -24,13 +39,16 @@ const HorizontalScrollCarousel = () => {
   return (
     <section id="Works" ref={targetRef} className="relative h-[300vh]">
       <div className="sticky top-0  flex flex-col justify-center items-center">
-        <div className="sticky top-0  max-w-[90%] max-lg:max-w-[100%] flex h-screen items-center  overflow-hidden">
+        <motion.div 
+        initial="initial"
+        whileInView="animate"
+        className="sticky top-0  max-w-[85%]  max-lg:max-w-[100%] flex h-screen items-center  overflow-hidden">
           <motion.div style={{ x }} className="flex gap-4">
             {Projects.map((card, index) => {
               return <MyCard card={card} key={index} />;
             })}
           </motion.div>
-        </div>
+        </motion.div>
         <div className="absolute w-full xs:bottom-10 bottom-[200px] flex justify-center items-center">
           <a href="#Services">
           <div className="w-[35px] h-[64px] ">
@@ -49,24 +67,24 @@ const MyCard = ({ card }) => {
   return (
     <div
       key={card.key}
-      className="relative w-[300px] max-lg:w-[250px] max-md:w-[200px] h-[400px] max-md:h-[350px] overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
+      className="relative w-[250px]  max-md:w-[200px] h-[350px]  overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
     >
-      <div className="card">
+      <motion.div variants={variants} className="card">
         <div className="box1">
           <div className="w-full h-full">
             <img src={card.image} className="w-full h-full object-fill" />
           </div>
           <div className="content1 opacity-95 flex flex-col space-y-4">
-            <h3 className="text-xl font-bold text-center max-lg:text-sm max-md:text-[12px]">
+            <h3 className="text-md font-bold text-center max-lg:text-sm max-md:text-[12px]">
               {" "}
               {card.name}{" "}
             </h3>
-            <p className="max-lg:text-[12px] max-md:text-[10px]">
+            <p className="text-[13px] max-md:text-[10px]">
               {" "}
               {card.description}
             </p>
             <div className="flex flex-col space-y-2">
-              <h3 className="text-lg font-bold  max-lg:text-sm max-md:text-[12px]">
+              <h3 className="text-md font-bold  max-lg:text-sm max-md:text-[12px]">
                 {" "}
                 Tech:{" "}
               </h3>
@@ -99,7 +117,7 @@ const MyCard = ({ card }) => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

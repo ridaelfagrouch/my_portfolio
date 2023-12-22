@@ -1,8 +1,8 @@
 import github from "./tech/github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
-import close_light from "./close_light.svg";
-import menu_light from "./menu_light.svg";
+import menu from "./icons/menu.svg";
+import close from "./icons/close.svg";
+import close_light from "./icons/close_light.svg";
+import menu_light from "./icons/menu_light.svg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -26,7 +26,7 @@ import wordpress from "./tech/wordpress.png";
 import mariadb from "./tech/mariadb.png";
 import reactnative from "./tech/react-native.png";
 import mysql from "./tech/mysql.png";
-import Atikia from "./Atikia.svg";
+import Atikia from "./icons/Atikia.svg";
 import born2beroot from "./projects/born2beroot/born2beroot.jpg";
 import cub3d from "./projects/cub3d/cub3d.png";
 import fdf from "./projects/fdf/fdf.png";
@@ -37,6 +37,7 @@ import movie_landingPage from "./projects/Movie-LandingPage/movie-landingPage.pn
 import philosopher from "./projects/philosopher/philosophers.webp";
 import todosApp from "./projects/todos app/todosApp.jpg";
 import webServer from "./projects/webServer/webServer.jpg";
+import portfolio from "./projects/portfolio/portfolio.png";
 
 
 export {
@@ -79,4 +80,5 @@ export {
   philosopher,
   todosApp,
   webServer,
+  portfolio,
 };
