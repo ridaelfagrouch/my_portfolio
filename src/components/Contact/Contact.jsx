@@ -52,7 +52,7 @@ const Contact = () => {
       id="Contact"
       initial="initial"
       whileInView="animate"
-      className="contact w-full max-w-7xl flex flex-row justify-center items-center px-4"
+      className="contact w-full max-w-7xl flex flex-row justify-center items-center px-4 my-10"
     >
       <motion.div
         variants={variants}
