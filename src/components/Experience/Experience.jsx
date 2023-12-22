@@ -26,7 +26,7 @@ const Experience = () => {
   return (
     <motion.section
       id="Experience"
-      className="relative  w-full  max-w-7xl flex flex-col justify-center items-center space-y-5  text-White max-md:mb-[150px]"
+      className="relative  w-full  max-w-7xl flex flex-col justify-center items-center space-y-5  text-White max-md:mb-[200px]"
       initial="initial"
       whileInView="animate"
     >
