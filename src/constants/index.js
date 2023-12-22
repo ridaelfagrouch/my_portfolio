@@ -239,7 +239,7 @@ const projects = [
       },
     ],
     image: ft_transcendence,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/ft_transcendence",
   },
   {
     name: "portfolio",
@@ -450,7 +450,7 @@ const projectsFr = [
       },
     ],
     image: ft_transcendence,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ridaelfagrouch/ft_transcendence",
   },
   {
     name: "portfolio",
