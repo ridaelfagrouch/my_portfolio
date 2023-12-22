@@ -82,7 +82,7 @@ const Experience = () => {
           <ul className="w-full text-white dark:text-primary">
             <li className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl">
               <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
-                {t("experience.educationmotion..item1.degree")}
+                {t("experience.educationSection.item1.degree")}
               </h3>
               <p className=" text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
                 {t("experience.educationSection.item1.description")}
