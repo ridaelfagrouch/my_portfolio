@@ -50,7 +50,7 @@ const HorizontalScrollCarousel = () => {
             })}
           </motion.div>
         </motion.div>
-        <div className="absolute w-full xs:bottom-10 bottom-[200px] flex justify-center items-center">
+        <div className="absolute w-full xs:bottom-10 bottom-[200px] max-md:bottom-[100px] flex justify-center items-center">
           <a href="#Services">
             <div className="w-[35px] h-[64px] ">
               <div className="chevron"></div>

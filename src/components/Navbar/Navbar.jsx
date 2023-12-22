@@ -4,18 +4,19 @@ import { navLinks, navLinksFr } from "../../constants";
 import { menu, close, close_light, menu_light } from "../../assets";
 import { Button } from "antd";
 import { motion } from "framer-motion";
-import { DarkMode, LanguageSwitcher } from "..";
+import DarkMode from "../DarkMode/DarkMode";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  const { t, i18n } = useTranslation();
+  const {t, i18n } = useTranslation();
   const NavLinks = i18n.language === "en" ? navLinks : navLinksFr;
   const [active, setActive] = useState(NavLinks[0].id);
   const [toggle, setToggle] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme"));
   const Close = theme === "light" ? close_light : close;
-  const Menu = theme === "light" ? menu_light : menu;
-
+  const Menu = theme === "light"? menu_light : menu;
+ 
   const handleNavLinkClick = (title) => {
     setToggle(false);
   };
@@ -74,7 +75,7 @@ const Navbar = () => {
               active === "Contact"
                 ? "border-2 border-primary dark:border-white"
                 : ""
-            } hidden lg:flex`}
+            } `}
             href="#Contact"
             onClick={() => handleNavLinkClick("Contact")}
           >
