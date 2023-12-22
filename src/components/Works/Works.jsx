@@ -68,7 +68,7 @@ const MyCard = ({ card }) => {
   return (
     <div
       key={card.key}
-      className="relative w-[250px]  max-md:w-[200px] h-[350px]  overflow-hidden rounded-lg bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
+      className="relative w-[250px]  max-md:w-[200px] h-[350px]  overflow-hidden rounded-md bg-whitePrimary transition-transform ease-in-out  border-2 border-primary dark:border-white overflow-y-hidden"
     >
       <motion.div variants={variants} className="card">
         <div className="box1">

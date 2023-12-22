@@ -33,24 +33,25 @@ const About = () => {
       <div className="flex w-full  space-x-5 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:space-x-0 max-xl:space-y-4 ">
         <motion.div
           variants={variants}
-          className="w-1/4  h-full max-xl:hidden bg-primary dark:bg-whitePrimary  rounded-lg flex justify-center items-center  drop-shadow-2xl"
+          className="w-1/4  h-full max-xl:hidden bg-primary dark:bg-whitePrimary  rounded-md flex justify-center items-center  drop-shadow-2xl"
         >
           <Image
             width={"100%"}
             height={350}
-            className="bg-whitePrimary max-xl:hidden rounded-lg"
+            className="bg-primary pl-6 max-xl:hidden rounded-md"
             src={myphoto}
+            preview={false}
           />
         </motion.div>
         <motion.div
           variants={variants}
-          className="w-[90%] hidden max-xl:flex h-[150px] bg-primary  dark:bg-whitePrimary  rounded-lg justify-center items-center p-[2%] drop-shadow-2xl"
+          className="w-[90%] hidden max-xl:flex h-[150px] bg-primary  dark:bg-whitePrimary  rounded-md justify-center items-center p-[2%] drop-shadow-2xl"
         >
-          <Avatar size={100} className=" bg-whitePrimary" />
+         <img class="inline-block h-[100px] w-[100px] pl-2 bg-black ring-2 rounded-full ring-white" src={myphoto} alt=""/>
         </motion.div>
         <motion.div
           variants={variants}
-          className=" w-3/4 max-xl:w-[90%] bg-primary dark:bg-whitePrimary rounded-lg flex flex-col justify-center p-[4%] space-y-3 drop-shadow-2xl"
+          className=" w-3/4 max-xl:w-[90%] bg-primary dark:bg-whitePrimary rounded-md flex flex-col justify-center p-[4%] space-y-3 drop-shadow-2xl"
         >
           <h1 className="text-white dark:text-primary max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px]">
             🚀 {t("about.greeting")}{" "}
@@ -79,7 +80,7 @@ const About = () => {
       <div className="flex  w-full max-xl:flex-col max-xl:justify-center max-xl:items-center  space-x-5 max-xl:space-x-0 max-xl:space-y-4 max-xl:pb-4">
         <motion.div
           variants={variants}
-          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
+          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-whitePrimary h-[100px] rounded-md flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
         >
           <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
             30+
@@ -90,7 +91,7 @@ const About = () => {
         </motion.div>
         <motion.div
           variants={variants}
-          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
+          className="w-1/5 max-xl:hidden max-xl:w-[90%]  bg-primary dark:bg-whitePrimary h-[100px] rounded-md flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
         >
           <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
             3+
@@ -102,7 +103,7 @@ const About = () => {
         <div className="xl:hidden flex flex-row justify-between w-2/3 max-xl:w-[90%] space-x-3">
           <motion.div
             variants={variants}
-            className="w-1/2  bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
+            className="w-1/2  bg-primary dark:bg-whitePrimary h-[100px] rounded-md flex flex-col justify-center items-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
           >
             <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
               30+
@@ -113,7 +114,7 @@ const About = () => {
           </motion.div>
           <motion.div
             variants={variants}
-            className="w-1/2   bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
+            className="w-1/2   bg-primary dark:bg-whitePrimary h-[100px] rounded-md flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
           >
             <h1 className="text-white dark:text-primary text-5xl max-xl:text-3xl max-md:text-xl font-bold text-center">
               3+
@@ -125,7 +126,7 @@ const About = () => {
         </div>
         <motion.div
           variants={variants}
-          className="w-3/5 max-xl:w-[90%] bg-primary dark:bg-whitePrimary h-[100px] rounded-lg flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
+          className="w-3/5 max-xl:w-[90%] bg-primary dark:bg-whitePrimary h-[100px] rounded-md flex flex-col justify-center p-[6%] max-xl:p-[4%] space-y-2 drop-shadow-2xl"
         >
           <div className="w-full">
             <div className="text-3xl text-left leading-tight h-3">“</div>
@@ -144,7 +145,7 @@ const About = () => {
       <div className="flex w-full max-xl:flex-col max-xl:justify-center max-xl:items-center  space-x-5 max-xl:space-x-0 ">
         <motion.div
           variants={variants}
-          className="w-full max-xl:w-[90%] bg-primary dark:bg-whitePrimary h-full rounded-lg flex flex-col justify-center items-center space-y-4 p-[4%] drop-shadow-2xl overflow-hidden "
+          className="w-full max-xl:w-[90%] bg-primary dark:bg-whitePrimary h-full rounded-md flex flex-col justify-center items-center space-y-4 p-[4%] drop-shadow-2xl overflow-hidden "
         >
           <h1 className="text-white dark:text-primary max-md:text-[10px] font-bold">
             {t("about.techStack")}
