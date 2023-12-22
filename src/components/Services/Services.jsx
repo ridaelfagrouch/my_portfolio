@@ -83,7 +83,7 @@ const Services = () => {
       initial="initial"
       whileInView="animate"
       id="Services"
-      className="w-full m-10 max-w-7xl flex flex-col justify-center items-center "
+      className="w-full max-w-7xl flex flex-col justify-center items-center "
     >
       <div className=" w-full max-w-7xl grid grid-cols-2 xl:grid-cols-3 max-md:grid-cols-1 gap-6 xl:gap-20 p-[5%]">
         {FeaturesData.map((item) => (
