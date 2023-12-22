@@ -69,7 +69,7 @@ const Hero = () => {
       initial="initial"
       whileInView="animate"
       id="Home"
-      className={`relative w-full  overflow-hidden`}
+      className={`relative w-full  overflow-hidden max-md:mb-20`}
     >
       <div className="max-w-7xl h-full mx-auto flex flex-row justify-between items-center space-x-2 py-5 max-2xl:relative ">
         <motion.div

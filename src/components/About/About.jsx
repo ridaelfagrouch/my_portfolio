@@ -28,7 +28,7 @@ const About = () => {
       id="About"
       initial="initial"
       whileInView="animate"
-      className="relative  w-full max-w-7xl flex flex-col justify-center items-center space-y-4 max-xl:space-y-0 text-White  py-4 "
+      className="relative  w-full max-w-7xl flex flex-col justify-center items-center space-y-4 max-xl:space-y-0 text-White  py-4 max-md:mb-20"
     >
       <div className="flex w-full  space-x-5 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:space-x-0 max-xl:space-y-4 ">
         <motion.div
