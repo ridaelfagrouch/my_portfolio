@@ -39,10 +39,11 @@ const HorizontalScrollCarousel = () => {
   return (
     <section id="Works" ref={targetRef} className="relative h-[300vh]">
       <div className="sticky top-0  flex flex-col justify-center items-center">
-        <motion.div 
-        initial="initial"
-        whileInView="animate"
-        className="sticky top-0  max-w-[85%]  max-lg:max-w-[100%] flex h-screen items-center  overflow-hidden">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          className="sticky top-0  max-w-[85%]  max-lg:max-w-[100%] flex h-screen items-center  overflow-hidden"
+        >
           <motion.div style={{ x }} className="flex gap-4">
             {Projects.map((card, index) => {
               return <MyCard card={card} key={index} />;
@@ -51,11 +52,11 @@ const HorizontalScrollCarousel = () => {
         </motion.div>
         <div className="absolute w-full xs:bottom-10 bottom-[200px] flex justify-center items-center">
           <a href="#Services">
-          <div className="w-[35px] h-[64px] ">
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-            <div className="chevron"></div>
-          </div>
+            <div className="w-[35px] h-[64px] ">
+              <div className="chevron"></div>
+              <div className="chevron"></div>
+              <div className="chevron"></div>
+            </div>
           </a>
         </div>
       </div>

@@ -62,8 +62,8 @@ const Hero = () => {
   const themePluginInstance = themePlugin();
   const { t, i18n } = useTranslation();
 
-  const MyResume = i18n.language === 'en' ? RidaCv : RidaCvFr; 
-  
+  const MyResume = i18n.language === "en" ? RidaCv : RidaCvFr;
+
   const showModal = () => {
     setIsModalOpen(true);
   };

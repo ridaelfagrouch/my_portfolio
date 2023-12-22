@@ -30,7 +30,10 @@ const Experience = () => {
       initial="initial"
       whileInView="animate"
     >
-      <motion.div variants={variants} className="flex flex-col space-y-12 justify-center items-center w-full max-w-7xl">
+      <motion.div
+        variants={variants}
+        className="flex flex-col space-y-12 justify-center items-center w-full max-w-7xl"
+      >
         <div className="w-full px-[5%]">
           <Divider
             style={{ fontWeight: "bold" }}
@@ -41,7 +44,7 @@ const Experience = () => {
         </div>
         <div className="container2 flex justify-center ">
           <ul className="w-[100%] text-white dark:text-primary">
-            <li  className="bg-primary dark:bg-whitePrimary">
+            <li className="bg-primary dark:bg-whitePrimary">
               <h3 className="text-[17px]  max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 {t("experience.position")}
               </h3>
@@ -63,7 +66,10 @@ const Experience = () => {
           </ul>
         </div>
       </motion.div>
-      <motion.div variants={variants} className="flex flex-col justify-center items-center  space-y-12 w-full max-w-7xl">
+      <motion.div
+        variants={variants}
+        className="flex flex-col justify-center items-center  space-y-12 w-full max-w-7xl"
+      >
         <div className="w-full px-[5%]">
           <Divider
             style={{ fontWeight: "bold" }}

@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import { AiFillAppstore } from "react-icons/ai";
-import { FaMobile, FaGlobe} from "react-icons/fa";
+import { FaMobile, FaGlobe } from "react-icons/fa";
 import { SiAntdesign } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -20,7 +20,6 @@ const variants = {
     },
   },
 };
-
 
 const featuresData = [
   {
@@ -76,22 +75,23 @@ const featuresDataFr = [
   },
 ];
 
-
 const Services = () => {
-  const {i18n} = useTranslation();
+  const { i18n } = useTranslation();
   const FeaturesData = i18n.language === "en" ? featuresData : featuresDataFr;
   return (
-    <motion.section 
-    initial="initial"
-    whileInView="animate"
-    id='Services' className='w-full m-10 max-w-7xl flex flex-col justify-center items-center '>
+    <motion.section
+      initial="initial"
+      whileInView="animate"
+      id="Services"
+      className="w-full m-10 max-w-7xl flex flex-col justify-center items-center "
+    >
       <div className=" w-full max-w-7xl grid grid-cols-2 xl:grid-cols-3 max-md:grid-cols-1 gap-6 xl:gap-20 p-[5%]">
         {FeaturesData.map((item) => (
           <Card item={item} key={item.id} />
         ))}
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
