@@ -44,14 +44,6 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
 };
 
 const Hero = () => {
@@ -73,11 +65,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="Home" className={`relative w-full  overflow-hidden`}>
+    <motion.section
+      initial="initial"
+      whileInView="animate"
+      id="Home"
+      className={`relative w-full  overflow-hidden`}
+    >
       <div className="max-w-7xl h-full mx-auto flex flex-row justify-between items-center space-x-2 py-5 max-2xl:relative ">
         <motion.div
-          initial="initial"
-          animate="animate"
           variants={textVariants}
           className=" flex flex-col gap-6 py-[10%] max-2xl:justify-center max-2xl:items-center max-2xl:w-full max-sm:gap-3 max-lg:text-center"
         >
@@ -111,8 +106,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          initial="initial"
-          animate="animate"
           variants={textVariants}
           className="w-[50%] max-2xl:absolute max-2xl:w-full "
         >
@@ -134,8 +127,6 @@ const Hero = () => {
       <motion.div
         className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen dark:text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-[0.15]"
         variants={sliderVariants}
-        initial="initial"
-        animate="animate"
       >
         {t("hero.animTitle")}
       </motion.div>
@@ -158,7 +149,7 @@ const Hero = () => {
           />
         </Worker>
       </Modal>
-    </section>
+    </motion.section>
   );
 };
 
