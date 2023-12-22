@@ -21,7 +21,6 @@ const LanguageSwitcher = () => {
   const changeLanguage = async (lng) => {
     await localStorage.setItem("language", lng);
     i18n.changeLanguage(lng);
-    console.log("change language: " + lng);
     setLang(lng);
   };
 
