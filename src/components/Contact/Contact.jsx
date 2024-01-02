@@ -69,14 +69,14 @@ const Contact = () => {
             required
             placeholder={t("contact.name")}
             name="name"
-            className="border-2 border-primary dark:border-white "
+            className="border-2 border-primary dark:border-white dark:text-white"
           />
           <input
             type="email"
             required
             placeholder={t("contact.email")}
             name="email"
-            className="border-2 border-primary dark:border-white"
+            className="border-2 border-primary dark:border-white dark:text-white"
           />
           <textarea
             rows={8}
