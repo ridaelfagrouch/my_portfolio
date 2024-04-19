@@ -33,7 +33,7 @@ const About = () => {
       <div className="flex w-full  space-x-5 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:space-x-0 max-xl:space-y-4 ">
         <motion.div
           variants={variants}
-          className="w-1/4  h-full max-xl:hidden bg-primary dark:bg-whitePrimary  rounded-md flex justify-center items-center  drop-shadow-2xl"
+          className="w-1/3  h-full max-xl:hidden bg-primary dark:bg-whitePrimary  rounded-md flex justify-center items-center  drop-shadow-2xl"
         >
           <Image
             width={"100%"}
