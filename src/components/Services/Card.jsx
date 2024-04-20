@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const variants = {
   initial: {
@@ -17,6 +18,7 @@ const variants = {
 };
 
 const Card = ({ item: { title, des, icon } }) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       variants={variants}
@@ -37,10 +39,10 @@ const Card = ({ item: { title, des, icon } }) => {
               {des}
             </p>
             <a
-              className="font-medium text-secondary underline hover:cursor-pointer max-lg:text-[10px] max-md:text-[8px]"
+              className="font-medium  dark:text-secondary underline hover:cursor-pointer max-lg:text-[10px] max-md:text-[8px]"
               href="#Contact"
             >
-              Contact me
+              {t("services.contactMe")}
             </a>
           </div>
         </div>

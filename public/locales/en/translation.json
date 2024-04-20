@@ -21,34 +21,57 @@
         "techStack": "My Tech Stack"
     },
     "experience": {
-        "Experience" : "Experience",
-        "Education" : "Education",
-        "position": "Mobile Developer",
-        "company": "Atikia",
-        "duration": "Four month Internship",
-        "description": "Engineered cross-platform mobile applications, ensuring a consistent and responsive user experience on both iOS and Android platforms.",
-        "readMoreLink": "Read more",
-        "educationSection": {
-            "item1": {
-              "degree": "Software Engineer",
-              "description": "Student in third year computer engineering, school 1337 (42 Network) Khouribga-morocco"
-            },
-            "item2" : {
-              "degree": "Bachelor's degree",
-              "description": "Bachelor's degree, physics-chemistry science, mechanical-energetic university of Sciences Rabat-morocco"
-            },
-            "item3": {
-              "degree": "Baccalaureate",
-              "description": "Baccalaureate in experimental science, with honors, lycee ibn al haytham tata-morocco"
+      "Experience": "Experience",
+      "Education": "Education",
+      "ShowLess": "Show Less",
+      "ShowMore": "Show More...",
+      "positions": [
+        {
+          "position": "Mobile Developer",
+          "company": "Atikia",
+          "contry" : "Morocco",
+          "duration": "Four month Internship",
+          "description": "Engineered cross-platform mobile applications, ensuring a consistent and responsive user experience on both iOS and Android platforms.",
+          "year": "2023",
+          "modalContent": {
+            "readMoreLink": "Read more",
+            "title": "Internship",
+            "content": {
+              "title": "Mobile Developer",
+              "companyName": "Atikia Company - Morocco"
             }
-        },
-        "modalContent": {
-          "title": "Internship",
-          "content": {
-            "title": "Mobile Developer",
-            "companyName": "Atikia Company - Morocco"
           }
+        },
+        {
+          "position": "Mobile Developer",
+          "company": "Gear9",
+          "contry" : "Morocco",
+          "duration": "Internship (Ongoing)",
+          "description": "Creating cutting-edge mobile applications for diverse clients. Collaborating in dynamic teams to develop and deploy innovative solutions.",
+          "year": "2024",
+          "modalContent": null
         }
+      ],
+      "educationSection": [
+        {
+          "degree": "Baccalaureate",
+          "description": "Baccalaureate in experimental science, with honors, lycee ibn al haytham tata-morocco",
+          "year": "2014-2015"
+        },
+        {
+          "degree": "Bachelor's degree",
+          "description": "Bachelor's degree, physics-chemistry science, mechanical-energetic university of Sciences Rabat-morocco",
+          "year": "2019-2020"
+        },
+        {
+          "degree": "Software Engineer",
+          "description": "Student in third year computer engineering, school 1337 (42 Network) Khouribga-morocco",
+          "year": "2023"
+        }
+      ]
+    },
+    "services": {
+      "contactMe":"Contact Me"
     },
     "contact": {
         "title": "Let’s work together",

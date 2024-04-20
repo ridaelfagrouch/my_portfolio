@@ -23,35 +23,57 @@
   "experience": {
     "Experience": "Expérience",
     "Education": "Éducation",
-    "position": "Développeur Mobile",
-    "company": "Atikia",
-    "duration": "Stage de quatre mois",
-    "description": "Conception d'applications mobiles multiplateformes, garantissant une expérience utilisateur cohérente et réactive sur les plateformes iOS et Android.",
-    "readMoreLink": "En savoir plus",
-    "educationSection": {
-      "item1": {
-        "degree": "Ingénieur logiciel",
-        "description": "Étudiant en troisième année de génie informatique, école 1337 (42 Network) Khouribga-Maroc",
-        "date": "2023"
+    "ShowLess": "Afficher moins",
+    "ShowMore": "Afficher plus...",
+    "positions": [
+      {
+        "position": "Développeur Mobile",
+        "company": "Atikia",
+        "contry" : "Maroc",
+        "duration": "Stage de quatre mois",
+        "description": "Conception d'applications mobiles multiplateformes, garantissant une expérience utilisateur cohérente et réactive sur les plateformes iOS et Android.",
+        "readMoreLink": "En savoir plus",
+        "year": "2023",
+        "modalContent": {
+          "readMoreLink": "Lire la suite",
+          "title": "Stage",
+          "content": {
+            "title": "Développeur Mobile",
+            "companyName": "Atikia Company - Maroc"
+          }
+        }
       },
-      "item2": {
-        "degree": "Licence",
-        "description": "Licence en sciences physiques-chimiques, spécialité mécanique-énergétique, Université des Sciences de Rabat-Maroc",
-        "date": "2019-2020"
-      },
-      "item3": {
+      {
+        "position": "Développeur Mobile",
+        "company": "Gear9",
+        "contry" : "Maroc",
+        "duration": "Stage (En cours)",
+        "description": "Création d'applications mobiles de pointe pour divers clients. Collaboration au sein d'équipes dynamiques pour développer et déployer des solutions innovantes.",
+        "year": "2024",
+        "modalContent": null
+      }
+      
+    ],
+    "educationSection": [
+      {
         "degree": "Baccalauréat",
         "description": "Baccalauréat en sciences expérimentales, avec mention, lycée Ibn al Haytham Tata-Maroc",
-        "date": "2014-2015"
+        "year": "2014-2015"
+      },
+      {
+        "degree": "Licence",
+        "description": "Licence en sciences physiques-chimiques, spécialité mécanique-énergétique, Université des Sciences de Rabat-Maroc",
+        "year": "2019-2020"
+      },
+      {
+        "degree": "Ingénieur logiciel",
+        "description": "Étudiant en troisième année de génie informatique, école 1337 (42 Network) Khouribga-Maroc",
+        "year": "2023"
       }
-    },
-    "modalContent": {
-      "title": "Stage",
-      "content": {
-        "title": "Développeur Mobile",
-        "companyName": "Atikia Company - Maroc"
-      }
-    }
+    ]
+  },
+  "services": {
+    "contactMe":"Contactez-moi"
   },
   "contact": {
     "title": "Travaillons ensemble",

@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50  bg-shadow-xl backdrop-blur-sm `}
+      className={`${styles.paddingX} w-full h-[80px] flex justify-between items-center fixed top-0 left-0 z-50  bg-shadow-xl bg-white dark:bg-primary `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <ul className="list-none hidden xl:flex flex-row gap-10">

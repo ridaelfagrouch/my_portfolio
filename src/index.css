@@ -489,6 +489,11 @@ section {
 	--height: 25px;
 	--speed3: 0.17s;
 	--deep-blue: #000;
+	--divider-color: #000000;
+  }
+
+  .dark {
+	--divider-color: #ffffff;
   }
   
   /* Global Style */
@@ -673,4 +678,12 @@ section {
 	  transform: translateY(4.8rem) scale(0.5);
 	}
   }
+  
+
+  .ant-divider-horizontal.ant-divider-with-text-center::before,
+  .ant-divider-horizontal.ant-divider-with-text-center::after {
+	  border-top: 1px solid var(--divider-color);
+  }
+
+  
   
