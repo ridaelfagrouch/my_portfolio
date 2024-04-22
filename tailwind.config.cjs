@@ -7,15 +7,15 @@ module.exports = {
     extend: {
       visibility: ["group-hover"],
     },
-   },
+  },
   theme: {
     fill: {
-      current: 'currentColor',
+      current: "currentColor",
     },
     extend: {
       colors: {
         primary: "#121212",
-        whitePrimary : "#EAEAEA",
+        whitePrimary: "#EAEAEA",
         secondary: "#aaa6c3",
         tertiary: "#151030",
         "black-100": "#100d25",
@@ -27,6 +27,9 @@ module.exports = {
       },
       screens: {
         xs: "450px",
+      },
+      gridTemplateColumns: {
+        40: "repeat(40, minmax(0, 1fr))",
       },
     },
   },
