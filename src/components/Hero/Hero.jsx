@@ -125,7 +125,7 @@ const Hero = () => {
         </a>
       </div>
       <motion.div
-        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen dark:text-white z-[-2] w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-[0.15]"
+        className="absolute bottom-[-100px] text-[30vh] whitespace-nowrap max-w-screen dark:text-white  w-[50%] max-xl:w-[130%] max-lg:w-[150] max-md:w-[280%] font-bold opacity-[0.15]"
         variants={sliderVariants}
       >
         {t("hero.animTitle")}
