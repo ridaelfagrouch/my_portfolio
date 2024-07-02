@@ -10,7 +10,6 @@ import {
   SocialMedia,
   Services,
 } from "./components";
-import { motion } from "framer-motion";
 
 function App() {
   return (
