@@ -39,6 +39,13 @@ import todosApp from "./projects/todos app/todosApp.jpg";
 import webServer from "./projects/webServer/webServer.jpg";
 import portfolio from "./projects/portfolio/portfolio.png";
 
+import expImage1 from "../assets/expImages/exp1/image1.png";
+import expImage2 from "../assets/expImages/exp1/image2.png";
+import expImage3 from "../assets/expImages/exp1/image3.png";
+import expImage4 from "../assets/expImages/exp1/image4.png";
+import expImage5 from "../assets/expImages/exp1/image5.png";
+import expImage6 from "../assets/expImages/exp1/image6.png";
+
 
 export {
   github,
@@ -81,4 +88,11 @@ export {
   todosApp,
   webServer,
   portfolio,
+
+  expImage1,
+  expImage2,
+  expImage3,
+  expImage4,
+  expImage5,
+  expImage6,
 };
