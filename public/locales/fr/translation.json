@@ -39,8 +39,16 @@
           "title": "Stage",
           "content": {
             "title": "Développeur Mobile",
-            "companyName": "Atikia Company - Maroc"
-          }
+            "companyName": "Société Atikia - Maroc"
+          },
+          "expImagesPath" : [
+              "../../../src/assets/expImages/exp1/image1.png",
+              "../../../src/assets/expImages/exp1/image2.png",
+              "../../../src/assets/expImages/exp1/image3.png",
+              "../../../src/assets/expImages/exp1/image4.png",
+              "../../../src/assets/expImages/exp1/image5.png",
+              "../../../src/assets/expImages/exp1/image6.png"
+            ]
         }
       },
       {

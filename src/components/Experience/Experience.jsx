@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Divider } from "antd";
 import { useTranslation } from "react-i18next";
-import Exp1Modal from "./ui/Exp1Modal";
+import ExpModal from "../../utils/ExpModal/ExpModal";
 import { motion } from "framer-motion";
+import { Exp1ModalPointsEn, Exp1ModalPointsFr } from "../../constants";
 
 const variants = {
   initial: {
@@ -19,9 +20,23 @@ const variants = {
   },
 };
 
+const wordsToHighlight = [
+  "React Native",
+  "Express/Node.js",
+  "Prisma",
+  "PostgreSQL",
+  "Styled Components",
+  "Redux",
+  "External APIs",
+  "React-query",
+  "TypeScript",
+  "trpc",
+  "frontend",
+  "backend",
+];
+
 const Experience = () => {
   const { t } = useTranslation();
-
   const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showMore, setShowMore] = useState({
@@ -35,6 +50,12 @@ const Experience = () => {
   const education = t("experience.educationSection", {
     returnObjects: true,
   }).reverse();
+
+
+  const expImagesPath =
+    t("experience.positions", {
+      returnObjects: true,
+    })[0]?.modalContent?.expImagesPath || [];
 
   const handleOpenModal = (item) => {
     setSelectedItem(item);
@@ -157,10 +178,14 @@ const Experience = () => {
           ? t("experience.ShowLess")
           : t("experience.ShowMore")}
       </a>
-      <Exp1Modal
+      <ExpModal
         open={open}
         onClose={handleCloseModal}
         experience={selectedItem}
+        Exp1ModalPointsEn={Exp1ModalPointsEn}
+        Exp1ModalPointsFr={Exp1ModalPointsFr}
+        wordsToHighlight={wordsToHighlight}
+        ExpImages={expImagesPath}
       />
     </motion.section>
   );

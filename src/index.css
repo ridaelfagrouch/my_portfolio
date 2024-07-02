@@ -684,3 +684,9 @@ section {
   text-decoration: none;
   border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
 }
+
+
+.highlight {
+  background-color: #fef95fc3;
+  font-weight: bold;
+}

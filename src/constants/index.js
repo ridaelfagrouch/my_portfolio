@@ -40,12 +40,9 @@ const Exp1ModalPointsEn = [
   "Leveraged Express/Node.js to develop backend functionality, seamlessly integrated with Prisma and PostgreSQL for efficient data management.",
   "Crafted visually appealing and cohesive UIs with Styled Components, maintaining a unified design language across the app.",
   "Orchestrated state management with Redux, centralizing data flow and expediting feature development.",
-  "Integrated third-party External APIs, enriching app capabilities with real-time data and extended functionalities.",
   "Used React-query as asynchronous state management.",
   "Bolstered code quality and type safety with TypeScript, resulting in more robust code and streamlined collaboration.",
   "Ensured type-safe communication between frontend and backend using trpc, enhancing API reliability.",
-  "Assisted in debugging, testing, and performance optimization, refining the app's overall efficiency.",
-  "Documented code-base and technical processes, facilitating knowledge sharing and on-boarding.",
 ];
 
 const Exp1ModalPointsFr = [
@@ -53,12 +50,9 @@ const Exp1ModalPointsFr = [
   "Utilisation d'Express/Node.js pour développer la fonctionnalité backend, intégration transparente avec Prisma et PostgreSQL pour une gestion efficace des données.",
   "Création d'interfaces utilisateur attrayantes et cohérentes avec Styled Components, en maintenant un langage de conception unifié dans l'application.",
   "Orchestration de la gestion de l'état avec Redux, centralisation du flux de données et accélération du développement des fonctionnalités.",
-  "Intégration d'API externes tierces, enrichissant les capacités de l'application avec des données en temps réel et des fonctionnalités étendues.",
   "Utilisation de React-query comme gestionnaire d'état asynchrone.",
   "Amélioration de la qualité du code et de la sécurité des types avec TypeScript, résultant en un code plus robuste et une collaboration rationalisée.",
   "Assurance d'une communication sûre entre le frontend et le backend en utilisant trpc, améliorant la fiabilité de l'API.",
-  "Assistance dans le débogage, les tests et l'optimisation des performances, affinant l'efficacité globale de l'application.",
-  "Documentation de la base de code et des processus techniques, facilitant le partage des connaissances et l'intégration.",
 ];
 
 const navLinks = [

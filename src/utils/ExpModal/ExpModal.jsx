@@ -1,21 +1,31 @@
 import React from "react";
 import { Modal } from "antd";
-import { Atikia } from "../../../assets";
+import { Atikia } from "../../assets";
 import { useTranslation } from "react-i18next";
-import { Exp1ModalPointsEn, Exp1ModalPointsFr } from "../../../constants";
+import { highlightWords } from "../utils";
+import { Image } from 'antd';
 
-const Exp1Modal = ({ open, onClose, experience }) => {
+const ExpModal = ({
+  open,
+  onClose,
+  experience,
+  Exp1ModalPointsEn,
+  Exp1ModalPointsFr,
+  wordsToHighlight,
+  ExpImages,
+}) => {
   const { t, i18n } = useTranslation();
 
   const ExpModalPoint =
     i18n.language === "en" ? Exp1ModalPointsEn : Exp1ModalPointsFr;
+
 
   return (
     <Modal
       title={experience?.modalContent?.title || ""}
       width={800}
       centered
-      visible={open}
+      open={open}
       footer={null}
       onCancel={onClose}
     >
@@ -37,17 +47,27 @@ const Exp1Modal = ({ open, onClose, experience }) => {
               </div>
             </div>
           </div>
-          <div className="w-full mt-5 mx-5 flex items-center">
-            <ul className="list-disc">
+          <div className="w-full mt-5 mx-5 flex items-center flex-col">
+            <ul className="list-disc px-2">
               {ExpModalPoint.map((point, index) => (
                 <li
                   key={index}
                   className="text-[16px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px]"
                 >
-                  {point}
+                  {highlightWords(point, wordsToHighlight)}
                 </li>
               ))}
             </ul>
+            <div className="w-full mt-5 flex items-center flex-wrap justify-center">
+              {ExpImages.map((img, index) => (
+                <Image
+                  key={index}
+                  src={img}
+                  width={100}
+                  alt="Experience Image"
+                />
+              ))}
+            </div>
           </div>
         </>
       )}
@@ -55,4 +75,4 @@ const Exp1Modal = ({ open, onClose, experience }) => {
   );
 };
 
-export default Exp1Modal;
+export default ExpModal;
