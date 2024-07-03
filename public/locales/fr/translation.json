@@ -64,11 +64,6 @@
     ],
     "educationSection": [
       {
-        "degree": "Baccalauréat",
-        "description": "Baccalauréat en sciences expérimentales, avec mention, lycée Ibn al Haytham Tata-Maroc",
-        "year": "2014-2015"
-      },
-      {
         "degree": "Licence",
         "description": "Licence en sciences physiques-chimiques, spécialité mécanique-énergétique, Université des Sciences de Rabat-Maroc",
         "year": "2019-2020"
