@@ -3,22 +3,17 @@ import { Modal } from "antd";
 import { Atikia } from "../../assets";
 import { useTranslation } from "react-i18next";
 import { highlightWords } from "../utils";
-import { Image } from 'antd';
+import { Image } from "antd";
 
 const ExpModal = ({
   open,
   onClose,
   experience,
-  Exp1ModalPointsEn,
-  Exp1ModalPointsFr,
   wordsToHighlight,
+  ExpModalPoints,
   ExpImages,
 }) => {
   const { t, i18n } = useTranslation();
-
-  const ExpModalPoint =
-    i18n.language === "en" ? Exp1ModalPointsEn : Exp1ModalPointsFr;
-
 
   return (
     <Modal
@@ -49,7 +44,7 @@ const ExpModal = ({
           </div>
           <div className="w-full mt-5 mx-5 flex items-center flex-col">
             <ul className="list-disc px-2">
-              {ExpModalPoint.map((point, index) => (
+              {ExpModalPoints?.map((point, index) => (
                 <li
                   key={index}
                   className="text-[16px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px]"
@@ -59,7 +54,7 @@ const ExpModal = ({
               ))}
             </ul>
             <div className="w-full mt-5 flex items-center flex-wrap justify-center">
-              {ExpImages.map((img, index) => (
+              {ExpImages?.map((img, index) => (
                 <Image
                   key={index}
                   src={img}

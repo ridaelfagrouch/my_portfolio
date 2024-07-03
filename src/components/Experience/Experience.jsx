@@ -3,7 +3,7 @@ import { Divider } from "antd";
 import { useTranslation } from "react-i18next";
 import ExpModal from "../../utils/ExpModal/ExpModal";
 import { motion } from "framer-motion";
-import { Exp1ModalPointsEn, Exp1ModalPointsFr } from "../../constants";
+import { ExpImages } from "../../constants";
 
 const variants = {
   initial: {
@@ -51,11 +51,14 @@ const Experience = () => {
     returnObjects: true,
   }).reverse();
 
-
-  const expImagesPath =
-    t("experience.positions", {
+  const getExp1ModalPoints = (expIndex) => {
+    const positions = t("experience.positions", {
       returnObjects: true,
-    })[0]?.modalContent?.expImagesPath || [];
+    });
+    const ExpModalPoints =
+      positions[expIndex]?.modalContent?.ExpModalPoints || [];
+    return ExpModalPoints;
+  };
 
   const handleOpenModal = (item) => {
     setSelectedItem(item);
@@ -100,19 +103,31 @@ const Experience = () => {
 
   const renderEducationItems = (items) =>
     items.map((item, index) => (
-      <li
-        key={index}
-        className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl"
-      >
-        <h3 className="text-[17px] max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
-          {item.degree}
-        </h3>
-        <p className="text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
-          {item.description}
-        </p>
-        <span className="date">{item.year}</span>
-        <span className="circle"></span>
-      </li>
+      <>
+        <li
+          key={index}
+          className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl"
+        >
+          <h3 className="text-[17px] max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+            {item.degree}
+          </h3>
+          <p className="text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
+            {item.description}
+          </p>
+          <span className="date">{item.year}</span>
+          <span className="circle"></span>
+        </li>
+        {ExpImages[index] ? (
+          <ExpModal
+            open={open}
+            onClose={handleCloseModal}
+            experience={selectedItem}
+            ExpModalPoints={getExp1ModalPoints(index)}
+            wordsToHighlight={wordsToHighlight}
+            ExpImages={ExpImages[index]}
+          />
+        ) : null}
+      </>
     ));
 
   return (
@@ -178,15 +193,6 @@ const Experience = () => {
           ? t("experience.ShowLess")
           : t("experience.ShowMore")}
       </a>
-      <ExpModal
-        open={open}
-        onClose={handleCloseModal}
-        experience={selectedItem}
-        Exp1ModalPointsEn={Exp1ModalPointsEn}
-        Exp1ModalPointsFr={Exp1ModalPointsFr}
-        wordsToHighlight={wordsToHighlight}
-        ExpImages={expImagesPath}
-      />
     </motion.section>
   );
 };

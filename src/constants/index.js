@@ -31,29 +31,21 @@ import {
   philosopher,
   todosApp,
   webServer,
-  portfolio
+  portfolio,
 } from "../assets";
 
+import {
+  expImage1,
+  expImage2,
+  expImage3,
+  expImage4,
+  expImage5,
+  expImage6,
+} from "../assets/";
 
-const Exp1ModalPointsEn = [
-  "Engineered cross-platform mobile applications using React Native, ensuring a consistent and responsive user experience on both iOS and Android platforms.",
-  "Leveraged Express/Node.js to develop backend functionality, seamlessly integrated with Prisma and PostgreSQL for efficient data management.",
-  "Crafted visually appealing and cohesive UIs with Styled Components, maintaining a unified design language across the app.",
-  "Orchestrated state management with Redux, centralizing data flow and expediting feature development.",
-  "Used React-query as asynchronous state management.",
-  "Bolstered code quality and type safety with TypeScript, resulting in more robust code and streamlined collaboration.",
-  "Ensured type-safe communication between frontend and backend using trpc, enhancing API reliability.",
-];
-
-const Exp1ModalPointsFr = [
-  "Conception d'applications mobiles multiplateformes avec React Native, garantissant une expérience utilisateur cohérente et réactive sur les plateformes iOS et Android.",
-  "Utilisation d'Express/Node.js pour développer la fonctionnalité backend, intégration transparente avec Prisma et PostgreSQL pour une gestion efficace des données.",
-  "Création d'interfaces utilisateur attrayantes et cohérentes avec Styled Components, en maintenant un langage de conception unifié dans l'application.",
-  "Orchestration de la gestion de l'état avec Redux, centralisation du flux de données et accélération du développement des fonctionnalités.",
-  "Utilisation de React-query comme gestionnaire d'état asynchrone.",
-  "Amélioration de la qualité du code et de la sécurité des types avec TypeScript, résultant en un code plus robuste et une collaboration rationalisée.",
-  "Assurance d'une communication sûre entre le frontend et le backend en utilisant trpc, améliorant la fiabilité de l'API.",
-];
+const ExpImages = [
+  [expImage1, expImage2, expImage3, expImage4, expImage5, expImage6],
+].reverse();
 
 const navLinks = [
   {
@@ -108,7 +100,6 @@ const navLinksFr = [
     title: "Contact",
   },
 ];
-
 
 const technologies = [
   {
@@ -242,7 +233,7 @@ const projects = [
     tech: [
       {
         icon: reactjs,
-        href: "https://react.dev/"
+        href: "https://react.dev/",
       },
       {
         icon: javascript,
@@ -341,7 +332,8 @@ const projects = [
       },
     ],
     image: movie_landingPage,
-    source_code_link: "https://github.com/ridaelfagrouch/movieStore-landingPage",
+    source_code_link:
+      "https://github.com/ridaelfagrouch/movieStore-landingPage",
   },
   {
     name: "WebServer",
@@ -405,7 +397,7 @@ const projects = [
     ],
     image: fdf,
     source_code_link: "https://github.com/ridaelfagrouch/FDF_42",
-  }
+  },
 ];
 
 const projectsFr = [
@@ -453,7 +445,7 @@ const projectsFr = [
     tech: [
       {
         icon: reactjs,
-        href: "https://react.dev/"
+        href: "https://react.dev/",
       },
       {
         icon: javascript,
@@ -552,7 +544,8 @@ const projectsFr = [
       },
     ],
     image: movie_landingPage,
-    source_code_link: "https://github.com/ridaelfagrouch/movieStore-landingPage",
+    source_code_link:
+      "https://github.com/ridaelfagrouch/movieStore-landingPage",
   },
   {
     name: "WebServer",
@@ -582,7 +575,8 @@ const projectsFr = [
   },
   {
     name: "Cub3d",
-    description: "Conception de vues dynamiques dans des environnements de labyrinthe complexes.",
+    description:
+      "Conception de vues dynamiques dans des environnements de labyrinthe complexes.",
     tech: [
       {
         icon: c,
@@ -607,7 +601,8 @@ const projectsFr = [
   },
   {
     name: "Fdf",
-    description: "Création de représentations de paysages 3D visuellement époustouflantes.",
+    description:
+      "Création de représentations de paysages 3D visuellement époustouflantes.",
     tech: [
       {
         icon: c,
@@ -616,8 +611,7 @@ const projectsFr = [
     ],
     image: fdf,
     source_code_link: "https://github.com/ridaelfagrouch/FDF_42",
-  }
+  },
 ];
 
-
-export { technologies, projects, projectsFr, navLinksFr, navLinks, Exp1ModalPointsEn, Exp1ModalPointsFr };
+export { technologies, projects, projectsFr, navLinksFr, navLinks, ExpImages };

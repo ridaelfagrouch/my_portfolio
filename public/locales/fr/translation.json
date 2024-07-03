@@ -29,7 +29,7 @@
       {
         "position": "Développeur Mobile",
         "company": "Atikia",
-        "contry" : "Maroc",
+        "contry": "Maroc",
         "duration": "Stage de quatre mois",
         "description": "Conception d'applications mobiles multiplateformes, garantissant une expérience utilisateur cohérente et réactive sur les plateformes iOS et Android.",
         "readMoreLink": "En savoir plus",
@@ -41,26 +41,26 @@
             "title": "Développeur Mobile",
             "companyName": "Société Atikia - Maroc"
           },
-          "expImagesPath" : [
-              "../../../src/assets/expImages/exp1/image1.png",
-              "../../../src/assets/expImages/exp1/image2.png",
-              "../../../src/assets/expImages/exp1/image3.png",
-              "../../../src/assets/expImages/exp1/image4.png",
-              "../../../src/assets/expImages/exp1/image5.png",
-              "../../../src/assets/expImages/exp1/image6.png"
-            ]
+          "ExpModalPoints": [
+            "Conception d'applications mobiles multiplateformes avec React Native, garantissant une expérience utilisateur cohérente et réactive sur les plateformes iOS et Android.",
+            "Utilisation d'Express/Node.js pour développer la fonctionnalité backend, intégration transparente avec Prisma et PostgreSQL pour une gestion efficace des données.",
+            "Création d'interfaces utilisateur attrayantes et cohérentes avec Styled Components, en maintenant un langage de conception unifié dans l'application.",
+            "Orchestration de la gestion de l'état avec Redux, centralisation du flux de données et accélération du développement des fonctionnalités.",
+            "Utilisation de React-query comme gestionnaire d'état asynchrone.",
+            "Amélioration de la qualité du code et de la sécurité des types avec TypeScript, résultant en un code plus robuste et une collaboration rationalisée.",
+            "Assurance d'une communication sûre entre le frontend et le backend en utilisant trpc, améliorant la fiabilité de l'API."
+          ]
         }
       },
       {
         "position": "Développeur Mobile",
         "company": "Gear9",
-        "contry" : "Maroc",
+        "contry": "Maroc",
         "duration": "Stage (En cours)",
         "description": "Création d'applications mobiles de pointe pour divers clients. Collaboration au sein d'équipes dynamiques pour développer et déployer des solutions innovantes.",
         "year": "2024",
         "modalContent": null
       }
-      
     ],
     "educationSection": [
       {
@@ -81,7 +81,7 @@
     ]
   },
   "services": {
-    "contactMe":"Contactez-moi"
+    "contactMe": "Contactez-moi"
   },
   "contact": {
     "title": "Travaillons ensemble",
