@@ -27,6 +27,7 @@
     "ShowMore": "Afficher plus...",
     "positions": [
       {
+        "id": "0",
         "position": "Développeur Mobile",
         "company": "Atikia",
         "contry": "Maroc",
@@ -53,13 +54,26 @@
         }
       },
       {
+        "id": "1",
         "position": "Développeur Mobile",
         "company": "Gear9",
         "contry": "Maroc",
         "duration": "Stage (En cours)",
         "description": "Création d'applications mobiles de pointe pour divers clients. Collaboration au sein d'équipes dynamiques pour développer et déployer des solutions innovantes.",
         "year": "2024",
-        "modalContent": null
+        "modalContent": {
+          "readMoreLink": "Lire la suite",
+          "title": "Stage",
+          "content": {
+            "title": "Développeur Mobile",
+            "companyName": "Société Gear9 - Maroc"
+          },
+          "ExpModalPoints": [
+            "Développement d'applications mobiles de pointe pour divers clients.",
+            "Collaboration au sein d'équipes dynamiques pour développer et déployer des solutions innovantes.",
+            "Participation à un projet de maintenance de code."
+           ]
+        }
       }
     ],
     "educationSection": [

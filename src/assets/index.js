@@ -26,7 +26,8 @@ import wordpress from "./tech/wordpress.png";
 import mariadb from "./tech/mariadb.png";
 import reactnative from "./tech/react-native.png";
 import mysql from "./tech/mysql.png";
-import Atikia from "./icons/Atikia.svg";
+import AtikiaLogo from "./expImages/exp1/Atikia.svg";
+import gear9Logo from "./expImages/exp2/logo.svg";
 import born2beroot from "./projects/born2beroot/born2beroot.jpg";
 import cub3d from "./projects/cub3d/cub3d.png";
 import fdf from "./projects/fdf/fdf.png";
@@ -76,7 +77,7 @@ export {
   mariadb,
   reactnative,
   mysql,
-  Atikia,
+  AtikiaLogo,
   born2beroot,
   cub3d,
   fdf,
@@ -88,6 +89,7 @@ export {
   todosApp,
   webServer,
   portfolio,
+  gear9Logo,
 
   expImage1,
   expImage2,

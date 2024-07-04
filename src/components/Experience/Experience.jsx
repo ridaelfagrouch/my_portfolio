@@ -3,7 +3,7 @@ import { Divider } from "antd";
 import { useTranslation } from "react-i18next";
 import ExpModal from "../../utils/ExpModal/ExpModal";
 import { motion } from "framer-motion";
-import { ExpImages } from "../../constants";
+import { ExpImages, CompanyLogos } from "../../constants";
 
 const variants = {
   initial: {
@@ -33,11 +33,15 @@ const wordsToHighlight = [
   "trpc",
   "frontend",
   "backend",
+  "applications",
+  "web",
+  "mobile",
+  "solutions",
+  "maintenance",
 ];
 
 const Experience = () => {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [showMore, setShowMore] = useState({
     experiences: false,
@@ -51,22 +55,12 @@ const Experience = () => {
     returnObjects: true,
   }).reverse();
 
-  const getExp1ModalPoints = (expIndex) => {
-    const positions = t("experience.positions", {
-      returnObjects: true,
-    });
-    const ExpModalPoints =
-      positions[expIndex]?.modalContent?.ExpModalPoints || [];
-    return ExpModalPoints;
-  };
-
   const handleOpenModal = (item) => {
     setSelectedItem(item);
-    setOpen(true);
   };
 
   const handleCloseModal = () => {
-    setOpen(false);
+    setSelectedItem(null);
   };
 
   const handleShowMore = (type) => {
@@ -103,31 +97,19 @@ const Experience = () => {
 
   const renderEducationItems = (items) =>
     items.map((item, index) => (
-      <>
-        <li
-          key={index}
-          className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl"
-        >
-          <h3 className="text-[17px] max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
-            {item.degree}
-          </h3>
-          <p className="text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
-            {item.description}
-          </p>
-          <span className="date">{item.year}</span>
-          <span className="circle"></span>
-        </li>
-        {ExpImages[index] ? (
-          <ExpModal
-            open={open}
-            onClose={handleCloseModal}
-            experience={selectedItem}
-            ExpModalPoints={getExp1ModalPoints(index)}
-            wordsToHighlight={wordsToHighlight}
-            ExpImages={ExpImages[index]}
-          />
-        ) : null}
-      </>
+      <li
+        key={index}
+        className="Education bg-primary dark:bg-whitePrimary drop-shadow-2xl"
+      >
+        <h3 className="text-[17px] max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
+          {item.degree}
+        </h3>
+        <p className="text-[13px] max-xl:text-[12px] max-md:text-[10px] max-sm:text-[8px] text-gray-200 dark:text-gray-600">
+          {item.description}
+        </p>
+        <span className="date">{item.year}</span>
+        <span className="circle"></span>
+      </li>
     ));
 
   return (
@@ -152,8 +134,8 @@ const Experience = () => {
         <div className="container2 flex justify-center">
           <ul className=" w-[100%] text-white dark:text-primary ">
             {!showMore.experiences
-              ? renderExperienceItems([experiences[0]], "experiences")
-              : renderExperienceItems(experiences, "experiences")}
+              ? renderExperienceItems([experiences[0]])
+              : renderExperienceItems(experiences)}
           </ul>
         </div>
       </motion.div>
@@ -180,8 +162,8 @@ const Experience = () => {
         <div className="container2 flex justify-center">
           <ul className="w-full text-white dark:text-primary">
             {!showMore.education
-              ? renderEducationItems([education[0]], "education")
-              : renderEducationItems(education, "education")}
+              ? renderEducationItems([education[0]])
+              : renderEducationItems(education)}
           </ul>
         </div>
       </motion.div>
@@ -193,6 +175,16 @@ const Experience = () => {
           ? t("experience.ShowLess")
           : t("experience.ShowMore")}
       </a>
+      {selectedItem && (
+        <ExpModal
+          open={!!selectedItem}
+          onClose={handleCloseModal}
+          experience={selectedItem}
+          wordsToHighlight={wordsToHighlight}
+          ExpImages={ExpImages[selectedItem.id]}
+          companyLogo={CompanyLogos[selectedItem.id]}
+        />
+      )}
     </motion.section>
   );
 };

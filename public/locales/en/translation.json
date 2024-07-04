@@ -27,6 +27,7 @@
     "ShowMore": "Show More...",
     "positions": [
       {
+        "id": "0",
         "position": "Mobile Developer",
         "company": "Atikia",
         "contry": "Morocco",
@@ -52,13 +53,27 @@
         }
       },
       {
+        "id": "1",
         "position": "Mobile Developer",
         "company": "Gear9",
         "contry": "Morocco",
         "duration": "Internship (Ongoing)",
         "description": "Creating cutting-edge mobile applications for diverse clients. Collaborating in dynamic teams to develop and deploy innovative solutions.",
         "year": "2024",
-        "modalContent": null
+        "modalContent": {
+          "readMoreLink": "Read more",
+          "title": "Internship",
+          "content": {
+            "title": "Mobile Developer",
+            "companyName": "Gear9 Company - Morocco"
+          },
+          "ExpModalPoints": [
+            "developed cutting-edge mobile applications for various clients.",
+            "Collaborated with cross-functional teams to deliver innovative web and mobile solutions.",
+            "Participating in code maintenance project."
+          ]
+        
+        }
       }
     ],
     "educationSection": [

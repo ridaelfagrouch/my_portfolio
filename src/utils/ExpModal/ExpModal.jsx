@@ -1,19 +1,27 @@
-import React from "react";
-import { Modal } from "antd";
-import { Atikia } from "../../assets";
+import React, { useState } from "react";
+import { Modal, Image, Skeleton } from "antd";
 import { useTranslation } from "react-i18next";
 import { highlightWords } from "../utils";
-import { Image } from "antd";
 
 const ExpModal = ({
   open,
   onClose,
   experience,
   wordsToHighlight,
-  ExpModalPoints,
   ExpImages,
+  companyLogo,
 }) => {
   const { t, i18n } = useTranslation();
+  const [loadedImages, setLoadedImages] = useState({});
+
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => ({ ...prev, [index]: true }));
+  };
+
+  const handleCloseModal = () => {
+    setLoadedImages({});
+    onClose();
+  }
 
   return (
     <Modal
@@ -22,12 +30,12 @@ const ExpModal = ({
       centered
       open={open}
       footer={null}
-      onCancel={onClose}
+      onCancel={handleCloseModal}
     >
       {experience && (
         <>
           <div className="flex w-full flex-row space-x-4">
-            <img src={Atikia} className="w-[40px]" alt="Company Logo" />
+            <img src={companyLogo} className="w-[40px]" alt="Company Logo" />
             <div className="flex w-full flex-col">
               <h3 className="text-[17px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px] font-bold">
                 {experience?.modalContent?.content?.title || ""}
@@ -44,7 +52,7 @@ const ExpModal = ({
           </div>
           <div className="w-full mt-5 mx-5 flex items-center flex-col">
             <ul className="list-disc px-2">
-              {ExpModalPoints?.map((point, index) => (
+              {experience?.modalContent?.ExpModalPoints?.map((point, index) => (
                 <li
                   key={index}
                   className="text-[16px] text-primary max-xl:text-[14px] max-md:text-[12px] max-sm:text-[10px]"
@@ -55,12 +63,16 @@ const ExpModal = ({
             </ul>
             <div className="w-full mt-5 flex items-center flex-wrap justify-center">
               {ExpImages?.map((img, index) => (
-                <Image
-                  key={index}
-                  src={img}
-                  width={100}
-                  alt="Experience Image"
-                />
+                <div key={index} style={{ margin: '5px' }}>
+                  {!loadedImages[index] && <Skeleton.Image active={true} />}
+                  <Image
+                    src={img}
+                    width={100}
+                    alt="Experience Image"
+                    style={{ display: loadedImages[index] ? 'inline-block' : 'none' }}
+                    onLoad={() => handleImageLoad(index)}
+                  />
+                </div>
               ))}
             </div>
           </div>

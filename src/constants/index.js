@@ -32,6 +32,8 @@ import {
   todosApp,
   webServer,
   portfolio,
+  AtikiaLogo,
+  gear9Logo,
 } from "../assets";
 
 import {
@@ -44,8 +46,10 @@ import {
 } from "../assets/";
 
 const ExpImages = [
-  [expImage1, expImage2, expImage3, expImage4, expImage5, expImage6],
-].reverse();
+  [expImage1, expImage2, expImage3, expImage4, expImage5, expImage6],[]
+];
+
+const CompanyLogos = [AtikiaLogo, gear9Logo];
 
 const navLinks = [
   {
@@ -614,4 +618,4 @@ const projectsFr = [
   },
 ];
 
-export { technologies, projects, projectsFr, navLinksFr, navLinks, ExpImages };
+export { technologies, projects, projectsFr, navLinksFr, navLinks, ExpImages, CompanyLogos };
